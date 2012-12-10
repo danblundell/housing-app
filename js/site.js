@@ -27,7 +27,7 @@
 		},this);
 
 		this.init = function (data) {
-			var questions = data.questions;
+			var questions = data;
 			for (var i = 0; i < questions.length; i += 1) {
 				var question = new nbcApp.models.Question(),
 					answers = questions[i].answers;
@@ -64,38 +64,48 @@
 		this.link = ko.observable();
 	};
 
-	var json = {
-		"questions" : [
-			{
-				"question" : "Does this work?",
-				"answers" : [
-					{
-						"answer" : "Yes",
-						"link" : "http://www.northampton.gov.uk"
-					},
-					{
-						"answer" : "No"
-					}
-				]
-			},
-			{
-				"question" : "Does this work too?",
-				"answers" : [
-					{
-						"answer" : "Almost",
-						"link" : "http://www.northampton.gov.uk"
-					},
-					{
-						"answer" : "Perfectly"
-					},
-					{
-						"answer" : "Not remotely",
-						"link" : "http://www.northampton.gov.uk/housing"
-					}
-				]
-			}
-		]
-	};
+	var json = [
+		{
+			"question" : "How old are you?",
+			"answers" : [
+				{
+					"answer" : "Under 16",
+					"link" : "http://www.northampton.gov.uk/housing"
+				},
+				{
+					"answer" : "Over 16"
+				}
+			]
+		},
+		{
+			"question" : "Do you, or a joint applicant already have a social housing tenancy in the Northampton area?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk"
+				},
+				{
+					"answer" : "No"
+				},
+				{
+					"answer" : "Maybe",
+					"link" : "http://www.northampton.gov.uk/housing"
+				}
+			]
+		},
+		{
+			"question" : "Do you want to inform us of a change to your circumstance",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk/housing"
+				},
+				{
+					"answer" : "No"
+				}
+			]
+		}
+	];
 
 	var app = new nbcApp.models.App();
 	app.init(json);

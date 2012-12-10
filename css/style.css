@@ -10,4 +10,9 @@
     display: block;
     margin: 0 auto 8px; }
     .question a:hover, .apply a:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      color: white; }
+    .question a:visited, .apply a:visited {
+      color: white; }
+    .question a:active, .apply a:active {
+      color: white; }
