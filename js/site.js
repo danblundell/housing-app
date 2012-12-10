@@ -7,18 +7,24 @@
 
 		this.questions = ko.observableArray();
 		this.currentQ = ko.observable(0);
+		this.apply = ko.observable(false);
 
 		//move to the next page
-		this.nextQ = function (e) {
-			console.log("next q");
+		this.nextQ = function () {
 			if(this.link()){
 				window.location = this.link();
 			} 
 			else{
+				if(self.lastQuestion()){
+					self.apply(true);
+				}
 				self.currentQ(self.currentQ() + 1);
 			}
-			
 		};
+
+		this.lastQuestion = ko.computed(function () {
+			return ((self.questions().length) === (self.currentQ() + 1)) ? true : false;
+		},this);
 
 		this.init = function (data) {
 			var questions = data.questions;
@@ -37,8 +43,10 @@
 				};
 
 				self.questions.push(question);
+
 			};
 		};
+
 
 	}
 
