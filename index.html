@@ -13,11 +13,11 @@
 	<link rel="stylesheet" href="css/ss-standard.css">
 </head>
 <body>
-	<div>
-		<div data-bind="foreach: questions">
+	<div data-bind="foreach: questions">
+		<div data-bind="visible: $parent.currentQ() == index(), attr: { id: index }" class="box-shadow question">
 			<p data-bind="text: content"></p>
 			<div data-bind="foreach: answers">
-				<a href="#" data-bind="attr: {href : link }" class="button red"><span data-bind="text: content"></span></a>
+				<a href="#" data-bind="click: $root.nextQ" class="button red"><span data-bind="text: content"></span></a>
 			</div>
 		</div>
 		

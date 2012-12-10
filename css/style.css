@@ -3,88 +3,11 @@
   -webkit-transition: color .3s ease-in-out;
   -moz-transition: color .3s ease-in-out; }
 
-#progress {
-  margin: 1em 0;
-  padding: 0;
-  border-radius: 15px; }
-
-#progress li {
-  display: block;
-  list-style-type: none;
-  padding: 10px 0; }
-
-#progress li.done {
-  color: #a52449; }
-
-.sub-question {
-  margin-left: 16px; }
-
-.info {
-  background: #F1F2F2;
-  border: 1px solid #D1D3D4;
-  width: 100%;
-  margin: 0;
-  padding: 16px;
-  max-width: 800px; }
-
-.info a {
-  display: block;
-  float: right;
+.question {
   text-align: center;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 5px 16px;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px; }
-
-.info a:hover {
-  text-decoration: none; }
-
-form fieldset select {
-  min-width: 20%;
-  width: 80%;
-  margin-right: 5%; }
-
-form fieldset label {
-  width: 100%; }
-
-.tick {
-  color: #1BC234;
-  font-size: 1.2em; }
-
-.answered {
-  color: #D1D3D4; }
-  .answered a {
-    color: #D1D3D4; }
-  .answered select {
-    color: #D1D3D4;
-    border-color: #D1D3D4; }
-
-.button {
-  color: #fff;
-  display: block;
-  width: 86%;
-  max-width: 250px;
-  text-align: center; }
-  .button span {
-    color: #fff; }
-  .button:hover {
-    text-decoration: none; }
-
-@media screen and (min-width: 600px) {
-  #progress li {
-    float: left;
-    text-align: center;
-    padding: 10px; }
-
-  .info {
-    margin: 0 0 0 20%;
-    max-width: 250px; }
-
-  form fieldset select {
-    max-width: 250px;
-    margin-right: 2%; }
-
-  form fieldset label {
-    width: 20%; } }
+  padding: 1em; }
+  .question a {
+    display: block;
+    margin: 0 auto 8px; }
+    .question a:hover {
+      text-decoration: none; }
