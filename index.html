@@ -14,6 +14,12 @@
 </head>
 <body>
 	<div>
+		<div data-bind="foreach: questions">
+			<p data-bind="text: content"></p>
+			<div data-bind="foreach: answers">
+				<a href="#" data-bind="attr: {href : link }" class="button red"><span data-bind="text: content"></span></a>
+			</div>
+		</div>
 		
 	</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
