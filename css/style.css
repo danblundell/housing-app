@@ -3,11 +3,11 @@
   -webkit-transition: color .3s ease-in-out;
   -moz-transition: color .3s ease-in-out; }
 
-.question {
+.question, .apply {
   text-align: center;
   padding: 1em; }
-  .question a {
+  .question a, .apply a {
     display: block;
     margin: 0 auto 8px; }
-    .question a:hover {
+    .question a:hover, .apply a:hover {
       text-decoration: none; }

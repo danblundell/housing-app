@@ -1,7 +1,8 @@
 $color-red :#A52449;
+
 * {transition:color .3s ease-in-out; -webkit-transition:color .3s ease-in-out; -moz-transition:color .3s ease-in-out;}
 
-.question{
+.question, .apply{
   text-align: center;
   padding:1em;
   a{
