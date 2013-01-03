@@ -9,25 +9,50 @@
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
 
-		//move to the next page
+		//move to the next question
 		this.nextQ = function () {
 			if(this.link()){
 				window.location = this.link();
 			} 
 			else{
-				if(self.lastQuestion()){
+				if(this.nextQ() >= self.questions().length){
 					self.apply(true);
+				}else{
+					self.apply(false);
 				}
 				self.currentQ(this.nextQ());
+				window.location.hash = self.currentQ();
 			}
 		};
 
-		//needs fixing no question structure has changed
-		this.lastQuestion = ko.computed(function () {
-			return ((self.questions().length) === (self.currentQ() + 1)) ? true : false;
-		},this);
+		//listen for hash change in supporting browsers
+		this.hashChanges = function () {
+			
+			if('onhashchange' in window){
+				window.onhashchange = function (e){
+
+					var h = parseInt(window.location.hash.replace('#',''),10);
+
+					if(isNaN(h)){
+						h = 0;
+					}
+
+					if(self.currentQ() !== h){
+						if(h >= self.questions().length){
+							self.apply(true);
+						}else{
+							self.apply(false);
+						}
+						self.currentQ(h);
+					}
+
+				};
+			}
+		};
 
 		this.init = function (data) {
+
+			//populate view from model
 			var questions = data;
 			for (var i = 0; i < questions.length; i += 1) {
 				var question = new nbcApp.models.Question(),
@@ -47,8 +72,16 @@
 				self.questions.push(question);
 
 			};
-		};
 
+
+			//remove any hash on page load
+			if(window.location.hash){
+				window.location.hash = '';	
+			}
+
+			//set up hash change listener
+			self.hashChanges();
+		};
 
 	}
 
@@ -585,4 +618,5 @@
 	var app = new nbcApp.models.App();
 	app.init(json);
 	ko.applyBindings(app);
+
 })();
