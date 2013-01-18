@@ -1,12 +1,22 @@
-#Housing Application Pre-Questions
+Housing Application Pre-Questions
+=================================
 
-Designed to guide customers through the initial stages of applying for housing support. Uses knockout for quick view-model development.
+What's this then?
+-----------------
 
-The app will give customers advice on their best option based on the answers given.
+A small app designed to guide customers through the initial stages of applying for housing support. 
 
-//Todo
+Each screen presented is determined by the answer given to the previous question.
 
-1. refactor JS
-2. redesign and recode UI
-3. fix outstanding IE UI bugs
-+ anything else
+Each question has multiple answers, some answers link to another question, some link to web pages with additional advice.
+
+
+Geeky bit
+---------
+
+The data model is in the style of a 'choose your own adventure' - get a different question depending on the answer chosen.
+
+Uses knockout.js[http://www.knockoutjs.com] for quick view-model development.
+
+One small html file to present it. A bit of javascript to make it work. A massive json object to provide the question and answer data. 
+
