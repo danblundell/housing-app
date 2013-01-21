@@ -3,9 +3,12 @@ $color-white:#ffffff;
 
 * {transition:color .3s ease-in-out; -webkit-transition:color .3s ease-in-out; -moz-transition:color .3s ease-in-out;}
 
-.question, .apply{
+.questions{
   text-align: center;
   padding:1em;
+}
+
+.answers, .apply{
   a{
     display:block;
     margin:0 auto 8px;

@@ -101,8 +101,18 @@
 		this.nextQ = ko.observable();
 	};
 
+
+	// Question Data Model
+	// questions: the question text
+	// infoText	: text to display to support terminology in the question
+	// infoLink	: a link to direct to for further information
+	// answers	: an array of possible answers
+	// 			answer : the text to display for an answer
+	//			link   : the link to immediately redirect to if the answer is selected
+	//			next   : the next question to display 
+
 	var json = [
-		{//0
+		{//2A (0)
 			"question" : "Have you (or someone else who is applying jointly with you for housing) already completed a housing application and submitted it to Northampton Borough Council?",
 			"answers" : [
 				{
@@ -111,50 +121,100 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 3
-				}
-			]
-		},
-		{//1
-			"question" : "Do you want to tell us about a change to your circumstances?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk"
-				},
-				{
-					"answer" : "No",
 					"next" : 2
 				}
 			]
 		},
-		{//2
-			"question" : "Do you want to enquire about the progress to your application?",
+		{//2A.1 (1)
+			"question" : "Would you like to:",
 			"answers" : [
 				{
-					"answer" : "Yes",
+					"answer" : "Tell us about medical or welfare needs in support of your application",
+					"link" : "http://www.northampton.gov.uk/downloads/file/1781/housing_medical_and_special_needs_questionnaire"
+				},
+				{
+					"answer" : "Tell us about a change to your circumstances",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1299/housing_allocations-change_in_circumstances"
+				},
+				{
+					"answer" : "Enquire about the progress to your application",
 					"link" : "http://www.northampton.gov.uk"
 				},
 				{
-					"answer" : "No",
+					"answer" : "Discuss something else",
 					"link" : "http://www.northampton.gov.uk"
 				}
 			]
 		},
-		{//3
-			"question" : "Are you 16 years or over?",
+		{//2B (2)
+			"question" : "Are you (or a joint applicant) a current Northampton Borough Council or <a href='http://www.northampton.gov.uk/info/100007/housing/1272/housing_associations' title='Housing Association List' target='_blank'>Northampton Housing Association</a> Tenant",
 			"answers" : [
 				{
 					"answer" : "Yes",
+					"next" : 3
+				},
+				{
+					"answer" : "No",
+					"next" : 5
+				}
+			]
+		},
+		{//2B.1 (3)
+			"question" : "Please tell us the reason you want or need to move",
+			"answers" : [
+				{
+					"answer" : "I want to move to a smaller property",
+					"next" : 31
+				},
+				{
+					"answer" : "I am overcrowded in my home",
 					"next" : 4
 				},
 				{
+					"answer" : "I need to move to a severe medical or welfare reason",
+					"next" : 4
+				},
+				{
+					"answer" : "My home lacks basic facilities",
+					"next" : 4
+				},
+				{
+					"answer" : "My home is insanitary or hazardous",
+					"next" : 4
+				},
+				{
+					"answer" : "I want to move for a nother reason",
+					"next" : 4
+				}
+			]
+		},
+		{//2B.1.1 (4)
+			"question" : "Are you in rent arrears?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "need some content here"
+				},
+				{
+					"answer" : "No",
+					"link" : "need some content here"
+				}
+			]
+		},
+		{//3 (5)
+			"question" : "Are you 18 years or over?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 6
+				},
+				{
 					"answer" : "No",
 					"link" : "http://www.northampton.gov.uk"
 				}
 			]
 		},
-		{//4
+		{//4 (6)
 			"question" : "Are you a British Citizen? ",
 			"answers" : [
 				{
@@ -163,12 +223,12 @@
 				},
 				{
 					"answer" : "No",
-					"next" :  6
+					"next" :  8
 				}
 			]
 		},
-		{//5
-			"question" : "Are you normally resident in the United Kingdom (or a member of HM Forces if based abroad)?",
+		{//4.1 (7)
+			"question" : "Are you (or a joint applicant) normally resident in the United Kingdom (or a member of HM Forces if based abroad)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -176,38 +236,12 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "to page with lots of text"
 				}
 			]
 		},
-		{//6
-			"question" : "Are you a Commonwealth Citizen?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 7
-				},
-				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
-				}
-			]
-		},
-		{//7
-			"question" : "Do you have a ‘right of abode’ in the United Kingdom?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 5
-				},
-				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
-				}
-			]
-		},
-		{//8
-			"question" : "Are you an EEA/EU National?",
+		{//4.2 (8)
+			"question" : "Are you (or a joint applicant) a Commonwealth Citizen?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -215,11 +249,39 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 11
+					"link" : "http://www.northampton.gov.uk"
 				}
 			]
 		},
-		{//9
+		{//4.2.1 (9)
+			"question" : "Do you have a ‘right of abode’ in the United Kingdom?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 7
+				},
+				{
+					"answer" : "No",
+					"link" : "to page with lots of text"
+				}
+			]
+		},
+		{//4.2.2 (10)
+			"question" : "Are you an EEA/EU National?",
+			"infoText" : "Are you from one of the following countries <ul><li>List of countries</li></ul>",
+			"infoLink" : "http://www.housing-rights.info/EEA-nationals.php",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 11
+				},
+				{
+					"answer" : "No",
+					"next" : 13
+				}
+			]
+		},
+		{//4.2.2.1 (11)
 			"question" : "Have you worked in the United Kingdom at any time – now or in the past?",
 			"answers" : [
 				{
@@ -232,8 +294,8 @@
 				}
 			]
 		},
-		{//10
-			"question" : "Are you working now?",
+		{//4.2.2.1.1 (12)
+			"question" : "Are you working now, temporarily out of work or a retired worker?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -241,74 +303,75 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "to a page of text"
 				}
 			]
 		},
-		{//11
+		{//4.2.2.2 (13)
 			"question" : "Are you a citizen of Bulgaria or Romania (A4 countries)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 12
-				},
-				{
-					"answer" : "No",
-					"next" : 13
-				}
-			]
-		},
-		{//12
-			"question" : "Are you currently working in the UK AND authorised to work (or exempt from authorisation)?",
-			"answers" : [
-				{
-					"answer" : "Yes",
 					"next" : 14
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"next" : 15
 				}
 			]
 		},
-		{//13
+		{//4.2.2.2.1 (14)
+			"question" : "Are you currently working in the UK AND authorised to work (or exempt from authorisation)?",
+			"infoLink" : "http://www.housing-rights.info/02_8_Bulgarians_Romanians.php",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 16
+				},
+				{
+					"answer" : "No",
+					"link" : "to page of text"
+				}
+			]
+		},
+		{//4.2.2.2.2 (15)
 			"question" : "Do you have one of the following status",
 			"answers" : [
 				{
 					"answer" : "Refugee",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "Humanitarian protection",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "Discretionary leave to remain",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "Exceptional leave to remain",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "Limited Leave to remain",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "Asylum seeker",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "The spouse/civil partner or child (under 18 and in full-time education) of someone who has one of the above status",
-					"next" : 14
+					"next" : 16
 				},
 				{
 					"answer" : "None of the above",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "to page of text"
 				}
 			]
 		},
-		{//14
+		{//5 (16)
 			"question" : "Which of the following best describes your current housing situation?",
 			"answers" : [
 				{
