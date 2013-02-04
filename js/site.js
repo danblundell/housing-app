@@ -4,7 +4,7 @@
 
 	nbcApp.models.App = function () {
 		var self = this;
-
+		this.iframe = true;
 		this.questions = ko.observableArray();
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
@@ -12,14 +12,10 @@
 		//move to the next question
 		this.nextQ = function () {
 			if(this.link()){
-				window.location = this.link();
+				(self.iframe) ? parent.window.location = this.link() : window.location = this.link();
 			} 
 			else{
-				if(this.nextQ() >= self.questions().length){
-					self.apply(true);
-				}else{
-					self.apply(false);
-				}
+				(this.nextQ() >= self.questions().length) ?	self.apply(true) : self.apply(false);
 				self.currentQ(this.nextQ());
 				window.location.hash = self.currentQ();
 			}
@@ -38,11 +34,7 @@
 					}
 
 					if(self.currentQ() !== h){
-						if(h >= self.questions().length){
-							self.apply(true);
-						}else{
-							self.apply(false);
-						}
+						(h >= self.questions().length) ? self.apply(true) : self.apply(false);
 						self.currentQ(h);
 					}
 
@@ -98,7 +90,6 @@
 
 	nbcApp.models.Answer = function () {
 		var self = this;
-
 		this.content = ko.observable();
 		this.link = ko.observable();
 		this.nextQ = ko.observable();
@@ -106,9 +97,7 @@
 
 
 	// Question Data Model
-	// questions: the question text
-	// infoText	: text to display to support terminology in the question
-	// infoLink	: a link to direct to for further information
+	// question : the question text
 	// answers	: an array of possible answers
 	// 			answer : the text to display for an answer
 	//			link   : the link to immediately redirect to if the answer is selected
@@ -869,5 +858,4 @@
 	var app = new nbcApp.models.App();
 	app.init(json);
 	ko.applyBindings(app);
-
 })();

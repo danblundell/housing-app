@@ -3,6 +3,9 @@
   -webkit-transition: color .3s ease-in-out;
   -moz-transition: color .3s ease-in-out; }
 
+body {
+  padding: 0; }
+
 .questions, .apply {
   text-align: center;
   padding: 1em; }
