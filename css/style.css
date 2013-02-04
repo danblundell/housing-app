@@ -7,6 +7,9 @@
   text-align: center;
   padding: 1em; }
 
+.question ul {
+  text-align: left; }
+
 .answers a, .apply a {
   display: block;
   margin: 0 auto 8px; }

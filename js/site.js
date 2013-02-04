@@ -141,7 +141,7 @@
 				},
 				{
 					"answer" : "Discuss something else",
-					"link" : "http://www.northampton.gov.uk/contactthecouncil"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1770/housing_application_progress_4"
 				}
 			]
 		},
@@ -154,7 +154,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_3"
 				}
 			]
 		},
@@ -167,7 +167,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_2"
 				}
 			]
 		},
@@ -176,11 +176,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_1"
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_2"
 				}
 			]
 		},
@@ -202,7 +202,7 @@
 			"answers" : [
 				{
 					"answer" : "I want to move to a smaller property",
-					"link" : "http://northampton.gov.uk"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_3"
 				},
 				{
 					"answer" : "I am overcrowded in my home",
@@ -231,11 +231,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_1"
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/speaktohousingofficer"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_2"
 				}
 			]
 		},
@@ -248,7 +248,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/under18yearsold"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1774/contact_us_for_advice"
 				}
 			]
 		},
@@ -274,7 +274,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -300,7 +300,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -327,7 +327,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1778/citizenship_3"
 				}
 			]
 		},
@@ -340,7 +340,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "to a page of text"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1778/citizenship_3"
 				}
 			]
 		},
@@ -367,7 +367,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "to page of text"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1779/citizenship_4"
 				}
 			]
 		},
@@ -404,7 +404,7 @@
 				},
 				{
 					"answer" : "None of the above",
-					"link" : "to page of text"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1780/citizenship_5"
 				}
 			]
 		},
@@ -438,7 +438,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				},
 				{
 					"answer" : "No",
@@ -463,12 +463,12 @@
 				},
 				{
 					"answer" : "None of the above",
-					"link" : "http://www.northampton.gov.uk/unlikelytoqualify"
+					"next" : 22
 				}
 			]
 		},
 		{//5.2.1 (22)
-			"question" : "Do any of the following apply to you now or within the next 4 weeks?<ul><li>Add list</li></ul>",
+			"question" : "Do any of the following apply to you now or within the next 4 weeks?<ul><li>You have been given a 'Notice to Quit'</li><li>You have been asked to leave your home (but aren't leaving the Armed Forces</li><li>You are being evicted</li><li>Your property is being reposessed</li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or temorary accommodation</li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a Compulsory Purchase Order (CPO)</li><li>You have been asked to leave your 'tied' accommodation</li><li>You have been asked to vacate your home as a result of enforcement by the Local Authority</li></ul>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -489,7 +489,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -544,7 +544,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/call"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
@@ -632,7 +632,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/callus"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
@@ -645,24 +645,24 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/homelessnessteam"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
-					"next" : 24
+					"next" : 32
 				}
 			]
 		},
 		{//6A1.1 (32)
-			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care and support?",
+			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/homelessnessteam"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -671,7 +671,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/homelessnessteam"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
@@ -684,7 +684,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/homelessnessteam"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
@@ -697,11 +697,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/homelessnessteam"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -740,7 +740,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -779,7 +779,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -809,7 +809,7 @@
 				},
 				{
 					"answer" : "None of the above",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -834,7 +834,7 @@
 				},
 				{
 					"answer" : "None of the above",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
@@ -843,7 +843,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				},
 				{
 					"answer" : "No",
@@ -856,7 +856,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://northampton.gov.uk/unlikelytoqualify"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				},
 				{
 					"answer" : "No",
