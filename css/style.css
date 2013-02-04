@@ -3,16 +3,20 @@
   -webkit-transition: color .3s ease-in-out;
   -moz-transition: color .3s ease-in-out; }
 
-.question, .apply {
+.questions, .apply {
   text-align: center;
   padding: 1em; }
-  .question a, .apply a {
-    display: block;
-    margin: 0 auto 8px; }
-    .question a:hover, .apply a:hover {
-      text-decoration: none;
-      color: white; }
-    .question a:visited, .apply a:visited {
-      color: white; }
-    .question a:active, .apply a:active {
-      color: white; }
+
+.question ul {
+  text-align: left; }
+
+.answers a, .apply a {
+  display: block;
+  margin: 0 auto 8px; }
+  .answers a:hover, .apply a:hover {
+    text-decoration: none;
+    color: white; }
+  .answers a:visited, .apply a:visited {
+    color: white; }
+  .answers a:active, .apply a:active {
+    color: white; }

@@ -3,9 +3,17 @@ $color-white:#ffffff;
 
 * {transition:color .3s ease-in-out; -webkit-transition:color .3s ease-in-out; -moz-transition:color .3s ease-in-out;}
 
-.question, .apply{
+.questions, .apply{
   text-align: center;
   padding:1em;
+}
+.question{
+  ul{
+    text-align: left;
+  }
+}
+
+.answers, .apply{
   a{
     display:block;
     margin:0 auto 8px;
