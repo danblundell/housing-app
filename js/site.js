@@ -10,7 +10,7 @@
 		this.apply = ko.observable(false);
 
 		//move to the next question
-		this.nextQ = function (e) {
+		this.nextQ = function () {
 			if(this.link()){
 				(self.iframe) ? parent.window.location = this.link() : window.location = this.link();
 			} 
