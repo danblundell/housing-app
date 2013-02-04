@@ -10,14 +10,16 @@
 		this.apply = ko.observable(false);
 
 		//move to the next question
-		this.nextQ = function () {
+		this.nextQ = function (e) {
 			if(this.link()){
 				(self.iframe) ? parent.window.location = this.link() : window.location = this.link();
 			} 
 			else{
 				(this.nextQ() >= self.questions().length) ?	self.apply(true) : self.apply(false);
 				self.currentQ(this.nextQ());
-				window.location.hash = self.currentQ();
+				if(window.onhashchange !== undefined){
+					window.location.hash = self.currentQ();
+				}
 			}
 		};
 

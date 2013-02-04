@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div data-bind="foreach: questions" class="questions">
-		<div data-bind="visible: $parent.currentQ() == index(), attr: { id: index }" class="question">
+		<div data-bind="visible: $parent.currentQ() == index(), attr: { id: 'q' + index() }" class="question">
 			<p data-bind="html: content"></p>
 			<div data-bind="foreach: answers" class="answers">
 				<a href="#" data-bind="click: $root.nextQ, attr: { href: $parent.id }" class="button red"><span data-bind="text: content"></span></a>
