@@ -8,6 +8,31 @@
 		this.questions = ko.observableArray();
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
+		
+
+		//PostMessage Callback
+		// this.displayMessage = function(evt) {
+		// 	var message;
+		// 	if (evt.origin !== "http://localhost") {
+		// 		message = "You are not worthy";
+		// 	}
+		// 	else {
+		// 		message = "I got " + evt.data + " from the container page";
+		// 	}	
+		// 	alert(message);
+		// };
+
+		// var st = setTimeout(function(){
+		// 	window.parent.postMessage("im a message from the iframe","http://localhost/");
+		// },4000);
+
+		// if (window.addEventListener) {
+		// 	// For standards-compliant web browsers
+		// 	window.addEventListener("message", self.displayMessage, false);
+		// }
+		// else {
+		// 	window.attachEvent("onmessage", self.displayMessage);
+		// }
 
 		//move to the next question
 		this.nextQ = function () {
