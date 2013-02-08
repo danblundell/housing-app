@@ -145,7 +145,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_3"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1769/housing_application_progress_3"
 				}
 			]
 		},
@@ -167,7 +167,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_1"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1767/housing_application_progress_1"
 				},
 				{
 					"answer" : "No",
@@ -193,14 +193,14 @@
 			"answers" : [
 				{
 					"answer" : "I want to move to a smaller property",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_3"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1773/current_tenancy_3"
 				},
 				{
 					"answer" : "I am overcrowded in my home",
 					"next" : 7
 				},
 				{
-					"answer" : "I need to move to a severe medical or welfare reason",
+					"answer" : "I need to move for a severe medical or welfare reason",
 					"next" : 7
 				},
 				{
@@ -212,7 +212,7 @@
 					"next" : 7
 				},
 				{
-					"answer" : "I want to move for a nother reason",
+					"answer" : "I want to move for another reason",
 					"next" : 7
 				}
 			]
@@ -226,7 +226,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_2"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1772/current_tenancy_2"
 				}
 			]
 		},
@@ -336,7 +336,7 @@
 			]
 		},
 		{//4.2.2.2 (16)
-			"question" : "Are you a citizen of Bulgaria or Romania (A4 countries)?",
+			"question" : "Are you a citizen of Bulgaria or Romania (A2 countries)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -390,7 +390,7 @@
 					"next" : 19
 				},
 				{
-					"answer" : "The spouse/civil partner or child (under 18 and in full-time education) of someone who has one of the above status",
+					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
 					"next" : 19
 				},
 				{
@@ -420,7 +420,7 @@
 				},
 				{
 					"answer" : "I have somewhere to live and am not threatened with homelessness",
-					"next" : 20
+					"next" : 25
 				}
 			]
 		},
@@ -539,7 +539,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 19
+					"next" : 27
 				}
 			]
 		},
