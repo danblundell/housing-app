@@ -489,7 +489,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 33
+					"next" : 39
 				},
 				{
 					"answer" : "No",
@@ -502,19 +502,19 @@
 			"answers" : [
 				{
 					"answer" : "I'm overcrowded in my home",
-					"next" : 33
+					"next" : 36
 				},
 				{
 					"answer" : "My home lacks basic facilities",
-					"next" : 33
+					"next" : 36
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
-					"next" : 33
+					"next" : 36
 				},
 				{
 					"answer" : "My accommodation is hazardous or insanitary",
-					"next" : 33
+					"next" : 36
 				},
 				{
 					"answer" : "My accommodation is not suitable for medical reasons",
@@ -572,7 +572,7 @@
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 33
+					"next" : 36
 				}
 			]
 		},
@@ -701,11 +701,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 40
+					"next" : 47
 				},
 				{
 					"answer" : "No",
-					"next" : 26
+					"next" : 37
 				}
 			]
 		},
@@ -714,7 +714,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 40
+					"next" : 47
 				},
 				{
 					"answer" : "No",
