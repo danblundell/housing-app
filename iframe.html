@@ -18,33 +18,27 @@
 <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 <script type='text/javascript'>
 //PostMessage Callback
-// (function(){
-// 	var iframeWin = document.getElementById("housing-app").contentWindow,
-// 		myMessage = "hello world, I'm a message";
+(function(){
+	
+	function getMessage(evt) {
+		console.log(evt);
+		if (evt.origin === "http://www.northampton.gov.uk/") {
+			var message = evt.data;
+			window.location = message;
+		}
+		else {
+			alert("wrong origin");
+		}	
+	};
 
-// 	$('#button').on('click',function () {
-// 		iframeWin.postMessage(myMessage,"http://localhost/");
-// 	});
-
-// 	function displayMessage1(evt) {
-// 			var message;
-// 			if (evt.origin !== "http://localhost") {
-// 				message = "You are not worthy 1";
-// 			}
-// 			else {
-// 				message = "I got " + evt.data;
-// 			}	
-// 			alert(message);
-// 		};
-
-// 	if (window.addEventListener) {
-// 			// For standards-compliant web browsers
-// 			window.addEventListener("message", displayMessage1, false);
-// 		}
-// 		else {
-// 			window.attachEvent("onmessage", displayMessage1);
-// 		}
-// })();
+	if (window.addEventListener) {
+		// For standards-compliant web browsers
+		window.addEventListener("message", getMessage, false);
+	}
+	else {
+		window.attachEvent("onmessage", getMessage);
+	}
+})();
 	
 </script>
 </body>

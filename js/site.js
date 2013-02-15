@@ -11,14 +11,14 @@
 		
 
 		//PostMessage Callback
-		this.sendMessageToParent = function(evt) {
-			window.parent.postMessage("im a message from the iframe","http://localhost/");
+		this.sendMessageToParent = function(url) {
+			window.parent.postMessage(url,"http://www.northampton.gov.uk/");
 		};
 
 		//move to the next question
 		this.nextQ = function () {
 			if(this.link()){
-				(self.iframe) ? parent.window.location = this.link() : window.location = this.link();
+				(self.iframe) ? self.sendMessageToParent(this.link()) : window.location = this.link();
 			} 
 			else{
 				(this.nextQ() >= self.questions().length) ?	self.apply(true) : self.apply(false);
