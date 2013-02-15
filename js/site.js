@@ -208,10 +208,6 @@
 					"next" : 7
 				},
 				{
-					"answer" : "My home is insanitary or hazardous",
-					"next" : 7
-				},
-				{
 					"answer" : "I want to move for another reason",
 					"next" : 7
 				}
@@ -386,10 +382,6 @@
 					"next" : 19
 				},
 				{
-					"answer" : "Asylum seeker",
-					"next" : 19
-				},
-				{
 					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
 					"next" : 19
 				},
@@ -442,15 +434,15 @@
 			"answers" : [
 				{
 					"answer" : "I have been discharged from the Armed Forces within the last 5 years",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "I am being discharged from the Armed Forces",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "I am the spouse or civil partner of a recently deceased member of the Armed Forces",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "None of the above",
@@ -489,7 +481,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 39
+					"next" : 33
 				},
 				{
 					"answer" : "No",
@@ -514,7 +506,7 @@
 				},
 				{
 					"answer" : "My accommodation is hazardous or insanitary",
-					"next" : 36
+					"next" : 47
 				},
 				{
 					"answer" : "My accommodation is not suitable for medical reasons",
@@ -701,7 +693,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "No",
@@ -714,7 +706,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "No",
@@ -740,7 +732,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "No",
@@ -753,7 +745,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "No",
@@ -851,7 +843,20 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 47
+					"next" : 48
+				}
+			]
+		},
+		{//5.3.1x (47)
+			"question" : "Are you sharing with members of your immediate family? (Parents, Children, Siblings)",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+				},
+				{
+					"answer" : "No",
+					"next" : 39
 				}
 			]
 		}
