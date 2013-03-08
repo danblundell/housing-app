@@ -4,24 +4,33 @@
 
 	nbcApp.models.App = function () {
 		var self = this;
-
+		this.iframe = false;
 		this.questions = ko.observableArray();
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
+		
+
+		//PostMessage Callback to parent window
+		this.sendMessageToParent = function(url) {
+			/**
+			* sends a message to the parent window
+			* containing the url to be loaded, 
+			* fallback for IE7 to open a new window
+			*/
+			(window.postMessage !== undefined) ? window.parent.postMessage(url,"http://localhost") : window.open(url);
+		};
 
 		//move to the next question
 		this.nextQ = function () {
 			if(this.link()){
-				window.location = this.link();
+				(self.iframe) ? self.sendMessageToParent(this.link()) : window.location = this.link();
 			} 
 			else{
-				if(this.nextQ() >= self.questions().length){
-					self.apply(true);
-				}else{
-					self.apply(false);
-				}
+				(this.nextQ() >= self.questions().length) ?	self.apply(true) : self.apply(false);
 				self.currentQ(this.nextQ());
-				window.location.hash = self.currentQ();
+				if(window.onhashchange !== undefined){
+					window.location.hash = self.currentQ();
+				}
 			}
 		};
 
@@ -38,11 +47,7 @@
 					}
 
 					if(self.currentQ() !== h){
-						if(h >= self.questions().length){
-							self.apply(true);
-						}else{
-							self.apply(false);
-						}
+						(h >= self.questions().length) ? self.apply(true) : self.apply(false);
 						self.currentQ(h);
 					}
 
@@ -98,7 +103,6 @@
 
 	nbcApp.models.Answer = function () {
 		var self = this;
-
 		this.content = ko.observable();
 		this.link = ko.observable();
 		this.nextQ = ko.observable();
@@ -106,13 +110,11 @@
 
 
 	// Question Data Model
-	// questions: the question text
-	// infoText	: text to display to support terminology in the question
-	// infoLink	: a link to direct to for further information
+	// question : the question text / html
 	// answers	: an array of possible answers
-	// 			answer : the text to display for an answer
+	// 			answer : the text to display for an answers button
 	//			link   : the link to immediately redirect to if the answer is selected
-	//			next   : the next question to display 
+	//			next   : the index of the next question to display 
 
 	var json = [
 		{//2A (0)
@@ -154,7 +156,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_3"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1769/housing_application_progress_3"
 				}
 			]
 		},
@@ -176,7 +178,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_1"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1767/housing_application_progress_1"
 				},
 				{
 					"answer" : "No",
@@ -202,14 +204,14 @@
 			"answers" : [
 				{
 					"answer" : "I want to move to a smaller property",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_3"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1773/current_tenancy_3"
 				},
 				{
 					"answer" : "I am overcrowded in my home",
 					"next" : 7
 				},
 				{
-					"answer" : "I need to move to a severe medical or welfare reason",
+					"answer" : "I need to move for a severe medical or welfare reason",
 					"next" : 7
 				},
 				{
@@ -217,11 +219,7 @@
 					"next" : 7
 				},
 				{
-					"answer" : "My home is insanitary or hazardous",
-					"next" : 7
-				},
-				{
-					"answer" : "I want to move for a nother reason",
+					"answer" : "I want to move for another reason",
 					"next" : 7
 				}
 			]
@@ -235,7 +233,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1771/current_tenancy_2"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1772/current_tenancy_2"
 				}
 			]
 		},
@@ -345,7 +343,7 @@
 			]
 		},
 		{//4.2.2.2 (16)
-			"question" : "Are you a citizen of Bulgaria or Romania (A4 countries)?",
+			"question" : "Are you a citizen of Bulgaria or Romania (A2 countries)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -395,11 +393,7 @@
 					"next" : 19
 				},
 				{
-					"answer" : "Asylum seeker",
-					"next" : 19
-				},
-				{
-					"answer" : "The spouse/civil partner or child (under 18 and in full-time education) of someone who has one of the above status",
+					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
 					"next" : 19
 				},
 				{
@@ -429,7 +423,7 @@
 				},
 				{
 					"answer" : "I have somewhere to live and am not threatened with homelessness",
-					"next" : 20
+					"next" : 25
 				}
 			]
 		},
@@ -451,15 +445,15 @@
 			"answers" : [
 				{
 					"answer" : "I have been discharged from the Armed Forces within the last 5 years",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "I am being discharged from the Armed Forces",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "I am the spouse or civil partner of a recently deceased member of the Armed Forces",
-					"next" : 47
+					"next" : 48
 				},
 				{
 					"answer" : "None of the above",
@@ -511,19 +505,15 @@
 			"answers" : [
 				{
 					"answer" : "I'm overcrowded in my home",
-					"next" : 26
+					"next" : 36
 				},
 				{
 					"answer" : "My home lacks basic facilities",
-					"next" : 26
+					"next" : 36
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
-					"next" : 26
-				},
-				{
-					"answer" : "My accommodation is hazardous or insanitary",
-					"next" : 26
+					"next" : 47
 				},
 				{
 					"answer" : "My accommodation is not suitable for medical reasons",
@@ -548,7 +538,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 19
+					"next" : 27
 				}
 			]
 		},
@@ -581,7 +571,7 @@
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 33
+					"next" : 36
 				}
 			]
 		},
@@ -710,11 +700,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 40
+					"next" : 45
 				},
 				{
 					"answer" : "No",
-					"next" : 26
+					"next" : 37
 				}
 			]
 		},
@@ -723,7 +713,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 40
+					"next" : 45
 				},
 				{
 					"answer" : "No",
@@ -749,7 +739,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 47
+					"next" : 45
 				},
 				{
 					"answer" : "No",
@@ -762,7 +752,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 47
+					"next" : 45
 				},
 				{
 					"answer" : "No",
@@ -860,7 +850,20 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 47
+					"next" : 48
+				}
+			]
+		},
+		{//5.3.1x (47)
+			"question" : "Are you sharing with members of your immediate family? (Parents, Children, Siblings)",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+				},
+				{
+					"answer" : "No",
+					"next" : 39
 				}
 			]
 		}
@@ -869,5 +872,4 @@
 	var app = new nbcApp.models.App();
 	app.init(json);
 	ko.applyBindings(app);
-
 })();

@@ -2,7 +2,7 @@ $color-red :#A52449;
 $color-white:#ffffff;
 
 * {transition:color .3s ease-in-out; -webkit-transition:color .3s ease-in-out; -moz-transition:color .3s ease-in-out;}
-
+body {padding:0;}
 .questions, .apply{
   text-align: center;
   padding:1em;
@@ -27,5 +27,21 @@ $color-white:#ffffff;
     &:active{
       color:$color-white;
     }
+  }
+}
+
+.answer{
+  position:relative;
+  margin:0 auto;
+  width:75%;
+}
+.info{
+  width:32px;
+  height:32px;
+  position: absolute;
+  right:0;
+  top:15%;
+  img{
+    width:100%;
   }
 }
