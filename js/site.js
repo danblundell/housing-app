@@ -10,13 +10,12 @@
 		this.apply = ko.observable(false);
 		
 
-		//PostMessage Callback to parent window
+		/**
+		* sends a message to the parent window
+		* containing the url to be loaded, 
+		* fallback for IE7 to open a new window
+		*/
 		this.sendMessageToParent = function(url) {
-			/**
-			* sends a message to the parent window
-			* containing the url to be loaded, 
-			* fallback for IE7 to open a new window
-			*/
 			(window.postMessage !== undefined) ? window.parent.postMessage(url,"http://localhost") : window.open(url);
 		};
 
@@ -36,10 +35,8 @@
 
 		//listen for hash change in supporting browsers
 		this.hashChanges = function () {
-			
 			if(window.onhashchange !== undefined){
 				window.onhashchange = function (e){
-
 					var h = parseInt(window.location.hash.replace('#',''),10);
 
 					if(isNaN(h)){
@@ -55,20 +52,27 @@
 			}
 		};
 
+		//sets up the model objects and properties
 		this.init = function (data) {
 
-			//populate view from model
+			//take a reference to the data
 			var questions = data;
 
-			//loop through the questions
+			//loop through the questions array
 			for (var i = 0; i < questions.length; i += 1) {
 				var question = new nbcApp.models.Question(),
 					answers = questions[i].answers;
 
+				//se the question properties
 				question.content(questions[i].question);
 				question.index(i);
 
-				//loop through all answers per question
+				/**
+				* loop through all answers for the question
+				* create an instance of the answer object
+				* set the properties and push to the 
+				* answers array
+				*/
 				for (var n = 0; n < answers.length; n += 1) {
 					var answer = new nbcApp.models.Answer();
 					answer.content(answers[n].answer);
@@ -77,6 +81,7 @@
 					question.answers.push(answer);
 				}
 
+				//add the current question to the knockout array of questions
 				self.questions.push(question);
 
 			}
