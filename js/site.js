@@ -110,11 +110,11 @@
 
 
 	// Question Data Model
-	// question : the question text
+	// question : the question text / html
 	// answers	: an array of possible answers
-	// 			answer : the text to display for an answer
+	// 			answer : the text to display for an answers button
 	//			link   : the link to immediately redirect to if the answer is selected
-	//			next   : the next question to display 
+	//			next   : the index of the next question to display 
 
 	var json = [
 		{//2A (0)
