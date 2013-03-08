@@ -4,7 +4,7 @@
 
 	nbcApp.models.App = function () {
 		var self = this;
-		this.iframe = true;
+		this.iframe = false;
 		this.questions = ko.observableArray();
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
