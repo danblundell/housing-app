@@ -16,13 +16,18 @@
 		<div data-bind="visible: $parent.currentQ() == index(), attr: { id: 'q' + index() }" class="question">
 			<p data-bind="html: content"></p>
 			<div data-bind="foreach: answers" class="answers">
-				<a href="#" data-bind="click: $root.nextQ, attr: { href: $parent.id }" class="button red"><span data-bind="html: content"></span></a>
+				<div class="answer">
+					<a href="#" data-bind="click: $root.nextQ, attr: { href: $parent.id }" class="button red"><span data-bind="html: content"></span></a>
+					<div class="info"><img src="images/info.png" /></div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="apply" data-bind="visible: apply">
 		<p>You might be entitled to some support with finding somewhere to live:</p>
-		<a href="http://ascvohoaw2k3/scripts/cgiip.exe/WService=OETEST/ibsxmlpr.p?docid=app_entry" class="button red"><span>Apply Now</span></a>
+		<a href="http://ascvohoaw2k3/scripts/cgiip.exe/WService=OETEST/ibsxmlpr.p?docid=app_entry" class="button red">
+			<span>Apply Now</span>
+		</a>
 	</div>
 	
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>

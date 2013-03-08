@@ -22,7 +22,7 @@
 	
 	function getMessage(evt) {
 		console.log(evt);
-		if (evt.origin === "http://www.northampton.gov.uk/") {
+		if (evt.origin === "http://localhost") {
 			var message = evt.data;
 			window.location = message;
 		}

@@ -10,9 +10,14 @@
 		this.apply = ko.observable(false);
 		
 
-		//PostMessage Callback
+		//PostMessage Callback to parent window
 		this.sendMessageToParent = function(url) {
-			window.parent.postMessage(url,"http://www.northampton.gov.uk/");
+			/**
+			* sends a message to the parent window
+			* containing the url to be loaded, 
+			* fallback for IE7 to open a new window
+			*/
+			(window.postMessage !== undefined) ? window.parent.postMessage(url,"http://localhost") : window.open(url);
 		};
 
 		//move to the next question
@@ -508,10 +513,6 @@
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
-					"next" : 36
-				},
-				{
-					"answer" : "My accommodation is hazardous or insanitary",
 					"next" : 47
 				},
 				{
@@ -699,7 +700,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 48
+					"next" : 45
 				},
 				{
 					"answer" : "No",
@@ -712,7 +713,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 48
+					"next" : 45
 				},
 				{
 					"answer" : "No",
@@ -738,7 +739,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 48
+					"next" : 45
 				},
 				{
 					"answer" : "No",
@@ -751,7 +752,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 48
+					"next" : 45
 				},
 				{
 					"answer" : "No",

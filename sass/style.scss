@@ -29,3 +29,19 @@ body {padding:0;}
     }
   }
 }
+
+.answer{
+  position:relative;
+  margin:0 auto;
+  width:75%;
+}
+.info{
+  width:32px;
+  height:32px;
+  position: absolute;
+  right:0;
+  top:15%;
+  img{
+    width:100%;
+  }
+}
