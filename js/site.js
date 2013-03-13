@@ -123,7 +123,7 @@
 
 	var json = [
 		{//2A (0)
-			"question" : "Have you (or someone else who is applying jointly with you for housing) already completed a housing application and submitted it to Northampton Borough Council?",
+			"question" : "Have you (or someone on your behalf) already completed a housing application and submitted it to Northampton Borough Council?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -131,7 +131,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 5
+					"next" : 6
 				}
 			]
 		},
@@ -166,15 +166,19 @@
 			]
 		},
 		{//2A.1.1.1 (3)
-			"question" : "Did the letter request that you bring in documents as proof of identity, eligibility, residence and/or current circumstances?",
+			"question" : "Did the letter:",
 			"answers" : [
 				{
-					"answer" : "Yes",
+					"answer" : "Request that you bring in documents as proof of identity, eligibility, residence and/or current circumstances?",
 					"next" : 4
 				},
 				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1768/housing_application_progress_2"
+					"answer" : "Tell you about your place on the register and/or your banding?",
+					"next" : 5
+				},
+				{
+					"answer" : "Ask you to clarify any details about your application?",
+					"next" : 6
 				}
 			]
 		},
@@ -191,20 +195,33 @@
 				}
 			]
 		},
-		{//2B (5)
-			"question" : "Are you (or a joint applicant) a current Northampton Borough Council or <a href='http://www.northampton.gov.uk/info/100007/housing/1272/housing_associations' title='Housing Association List' target='_blank'>Northampton Housing Association</a> Tenant",
+		{//2A.1.1.1.2 (5)
+			"question" : "Do you want to appeal against the decision?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 6
+					"link" : "http://www.northampton.gov.uk/appealsprocess"
 				},
 				{
 					"answer" : "No",
-					"next" : 8
+					"link" : "http://www.northampton.gov.uk/contactthecouncil"
 				}
 			]
 		},
-		{//2B.1 (6)
+		{//2B (6)
+			"question" : "Are you a current Northampton Borough Council tenant or a tenant of a <a href='http://www.northampton.gov.uk/info/100007/housing/1272/housing_associations' title='Housing Association List' target='_blank'>Northampton Housing Association</a>",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 7
+				},
+				{
+					"answer" : "No",
+					"next" : 9
+				}
+			]
+		},
+		{//2B.1 (7)
 			"question" : "Please tell us the reason you want or need to move",
 			"answers" : [
 				{
@@ -213,24 +230,27 @@
 				},
 				{
 					"answer" : "I am overcrowded in my home",
-					"next" : 7
+					"next" : 8,
+					"info" : "overcrowded info"
 				},
 				{
 					"answer" : "I need to move for a severe medical or welfare reason",
-					"next" : 7
+					"next" : 8,
+					"info" : "severe medical or welfare reason"
 				},
 				{
 					"answer" : "My home lacks basic facilities",
-					"next" : 7
+					"next" : 8,
+					"info" : "basic facilities"
 				},
 				{
 					"answer" : "I want to move for another reason",
-					"next" : 7
+					"next" : 8
 				}
 			]
 		},
-		{//2B.1.1 (7)
-			"question" : "Are you in rent arrears?",
+		{//2B.1.1 (8)
+			"question" : "Are you in <a href='#'>rent arrears</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -238,25 +258,26 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1772/current_tenancy_2"
+					"next" : "go to question 5" 
 				}
 			]
 		},
-		{//3 (8)
-			"question" : "Are you 18 years or over?",
+		{//3 (9)
+			"question" : "How old are you?",
 			"answers" : [
 				{
-					"answer" : "Yes",
-					"next" : 9
+					"answer" : "Under 16",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1774/contact_us_for_advice"
 				},
 				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1774/contact_us_for_advice"
+					"answer" : "16 or over",
+					"next" : 10
 				}
+				
 			]
 		},
-		{//4 (9)
-			"question" : "Are you a British Citizen? ",
+		{//4 (10)
+			"question" : "Are you a <a href='#'>British Citizen</a>? ",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -269,7 +290,7 @@
 			]
 		},
 		{//4.1 (10)
-			"question" : "Are you (or a joint applicant) normally resident in the United Kingdom (or a member of HM Forces if based abroad)?",
+			"question" : "Do you live in the <a href='#'>United Kingdom</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -282,7 +303,7 @@
 			]
 		},
 		{//4.2 (11)
-			"question" : "Are you (or a joint applicant) a Commonwealth Citizen?",
+			"question" : "Are you a <a href='#'>Commonwealth Citizen</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -295,7 +316,7 @@
 			]
 		},
 		{//4.2.1 (12)
-			"question" : "Do you have a ‘right of abode’ in the United Kingdom?",
+			"question" : "Do you have a <a href='#'>right of abode</a> in the <a href='#'>United Kingdom</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -335,7 +356,7 @@
 			]
 		},
 		{//4.2.2.1.1 (15)
-			"question" : "Are you working now, temporarily out of work or a retired worker?",
+			"question" : "Are you <a href='#'>working now</a>, <a href='#'>temporarily out of work</a> or a <a href='#'>retired worker</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -349,6 +370,7 @@
 		},
 		{//4.2.2.2 (16)
 			"question" : "Are you a citizen of Bulgaria or Romania (A2 countries)?",
+			"infoLink" : "http://www.housing-rights.info/02_8_Bulgarians_Romanians.php",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -411,23 +433,23 @@
 			"question" : "Which of the following best describes your current housing situation?",
 			"answers" : [
 				{
-					"answer" : "I am homeless",
+					"answer" : "I/We are <a href='#'>homeless</a>",
 					"next" : 20
 				},
 				{
-					"answer" : "I have a home but I am unable to live in it due to fire, flood or other emergency",
+					"answer" : "I/We have a home but I am unable to live in it due to fire, flood or other emergency",
 					"next" : 20
 				},
 				{
-					"answer" : "I have somewhere to live at the moment but I am threatened with homelessness",
+					"answer" : "I/We have somewhere to live at the moment but I am <a href='#'>threatened with homelessness</a>",
 					"next" : 21
 				},
 				{
-					"answer" : "I have somewhere to live but have nowhere I can live together with my immediate family ",
+					"answer" : "I/We have somewhere to live but have nowhere I can live together with my <a href='#'>immediate family</a> ",
 					"next" : 20
 				},
 				{
-					"answer" : "I have somewhere to live and am not threatened with homelessness",
+					"answer" : "I/We have somewhere to live and am not threatened with homelessness",
 					"next" : 25
 				}
 			]
