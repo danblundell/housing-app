@@ -17,6 +17,7 @@ body {padding:0;}
   a{
     display:block;
     margin:0 auto 8px;
+    z-index: 9999;
     &:hover{
       text-decoration: none;
       color:$color-white;
@@ -33,7 +34,7 @@ body {padding:0;}
 .answer{
   position:relative;
   margin:0 auto;
-  width:75%;
+  width:350px;
 }
 .info{
   width:32px;
@@ -43,5 +44,39 @@ body {padding:0;}
   top:15%;
   img{
     width:100%;
+  }
+}
+.tooltip{
+  width: 50px;
+  position: absolute;
+  top: 17.5%;
+  right: 0px;
+  padding: 4px 0;
+  background: rgb(241, 242, 242);
+  color: rgb(100, 121, 127);
+  cursor: pointer;
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: bold;
+  border:1px solid rgb(209, 211, 212);
+  border-left:0;
+  -webkit-box-shadow:inset 0px 1px 2px rgb(30,30,30);
+  -moz-box-shadow:inset 0px 1px 2px rgb(30,30,30);
+  box-shadow:inset 0px 1px 2px rgb(30,30,30);
+  -webkit-border-top-right-radius:25px;
+  -webkit-border-bottom-right-radius:25px;
+  -moz-border-top-right-radius:25px;
+  -moz-border-bottom-right-radius:25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  -webkit-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  &:hover{
+    color:rgb(254,254,254);
+    width:70px;
+    right: -20px;
+    background:rgb(100, 121, 127);
+    
   }
 }

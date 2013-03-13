@@ -78,6 +78,7 @@
 					answer.content(answers[n].answer);
 					answer.link(answers[n].link);
 					answer.nextQ(answers[n].next);
+					answer.tooltip(answers[n].info);
 					question.answers.push(answer);
 				}
 
@@ -111,6 +112,7 @@
 		this.content = ko.observable();
 		this.link = ko.observable();
 		this.nextQ = ko.observable();
+		this.tooltip = ko.observable();
 	};
 
 
@@ -773,7 +775,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 34
+					"next" : 37
 				}
 			]
 		},
@@ -786,7 +788,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 35
+					"next" : 38
 				}
 			]
 		},
@@ -804,11 +806,11 @@
 			]
 		},
 		{//6C (39)
-			"question" : "Have you or a joint applicant lived in the Northampton area for at least three out of the last five years?",
+			"question" : "Have you lived in the Northampton area for at least three out of the last five years?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45
+					"next" : 45 //10
 				},
 				{
 					"answer" : "No",
@@ -817,50 +819,11 @@
 			]
 		},
 		{//6C.1 (40)
-			"question" : "Do you or a joint applicant work in Northampton?",
+			"question" : "Do you work in Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45
-				},
-				{
-					"answer" : "No",
-					"next" : 38
-				}
-			]
-		},
-		{//6C1.1 (38)
-			"question" : "Do you or a joint applicant want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 45
-				},
-				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
-				}
-			]
-		},
-		{//6D (39)
-			"question" : "Did you or a joint applicant live in the Borough of Northampton for at least 3 out of th elast 5 years prior to leaving Northampton?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 45
-				},
-				{
-					"answer" : "No",
-					"next" : 40
-				}
-			]
-		},
-		{//6D.1 (40)
-			"question" : "Did you or a joint applicant work in the Borough of Northampton prior to leaving Northampton?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 45
+					"next" : 45 //10
 				},
 				{
 					"answer" : "No",
@@ -868,12 +831,12 @@
 				}
 			]
 		},
-		{//6D1.1 (41)
-			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
+		{//6C1.1 (41)
+			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45
+					"next" : 45 //10
 				},
 				{
 					"answer" : "No",
@@ -881,12 +844,25 @@
 				}
 			]
 		},
-		{//9B (42)
-			"question" : "Do you need to move to a larger home to accommodate a 'looked after' child?",
+		{//6D (42)
+			"question" : "Did you live in the Borough of Northampton for at least 3 out of th elast 5 years prior to leaving Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
+					"next" : 100
+				},
+				{
+					"answer" : "No",
 					"next" : 43
+				}
+			]
+		},
+		{//6D.1 (43)
+			"question" : "Did you work in the Borough of Northampton prior to leaving Northampton?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 45 //10
 				},
 				{
 					"answer" : "No",
@@ -894,16 +870,44 @@
 				}
 			]
 		},
-		{//9B.1 (43)
+		{//6D1.1 (44)
+			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 45 //10
+				},
+				{
+					"answer" : "No",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+				}
+			]
+		},
+		{//9B (45)
+			"question" : "Do you need to move to a larger home to accommodate a 'looked after' child?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 46
+				},
+				{
+					"answer" : "No",
+					"next" : 47
+				}
+			]
+		},
+		{//9B.1 (46)
 			"question" : "Which of the following apply to you?",
 			"answers" : [
 				{
 					"answer" : "I have a fostering or adopting agreement in place",
-					"next" : 36
+					"info" : "fostering or adopting agreement",
+					"next" : 36 //6c
 				},
 				{
 					"answer" : "I am the special guardian, family carer or hold a residence order for a child whose parents are unable to provide care",
-					"next" : 36
+					"info" : "special guardian / family carer description",
+					"next" : 36 //6c
 				},
 				{
 					"answer" : "None of the above",
@@ -911,24 +915,28 @@
 				}
 			]
 		},
-		{//9B.2 (44)
+		{//9B.2 (47)
 			"question" : "Do any the following apply to you?",
 			"answers" : [
 				{
 					"answer" : "I have had an emergency move agreed by NBC",
-					"next" : 45
+					"info" : "emergency agreement description",
+					"next" : 100
 				},
 				{
 					"answer" : "I have had a 'move-on' agreed by NBC",
-					"next" : 45
+					"info" : "move-on description",
+					"next" : 100
 				},
 				{
 					"answer" : "I am part of a separte agreement by NBC",
-					"next" : 45
+					"info" : "separate agreement description",
+					"next" : 100
 				},
 				{
 					"answer" : "I have special needs and need help finding accommodation",
-					"next" : 45
+					"info" : "special needs description",
+					"next" : 100
 				},
 				{
 					"answer" : "None of the above",
@@ -936,7 +944,7 @@
 				}
 			]
 		},
-		{//10 (45)
+		{//10 (48)
 			"question" : "Do you have more than £30,000 household income (for a single person household) or more than £50,000 income (for a family household)?",
 			"answers" : [
 				{
@@ -945,11 +953,11 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 46
+					"next" : 49
 				}
 			]
 		},
-		{//10.1 (46)
+		{//10.1 (49)
 			"question" : "Do you have more than £16,000 in assets (single applicant) or more than £32,000 in assets (joint applicants)?",
 			"answers" : [
 				{
@@ -958,20 +966,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 48
-				}
-			]
-		},
-		{//5.3.1x (47)
-			"question" : "Are you sharing with members of your immediate family? (Parents, Children, Siblings)",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
-				},
-				{
-					"answer" : "No",
-					"next" : 39
+					"next" : 100
 				}
 			]
 		}
