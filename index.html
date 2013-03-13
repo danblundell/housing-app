@@ -19,10 +19,17 @@
 				<div class="answer">
 					<a href="#" data-bind="click: $root.nextQ, attr: { href: $parent.id }" class="button red"><span data-bind="html: content"></span>
 					</a>
-					<div class="tooltip" >
+					<div class="tooltip" data-bind="visible: tooltip, click: toggleTooltip">
 						<span>i</span>
 					</div>
-					
+				</div>
+			</div>
+			<div data-bind="foreach: answers">
+				<div class="tooltip-wrapper" data-bind="visible: tooltipOn">
+					<div class="tooltip-content box-shadow">
+						<div data-bind="html: tooltip"></div>
+						<a href="#" class="red button" data-bind="click: toggleTooltip">Close</a>
+					</div>
 				</div>
 			</div>
 		</div>

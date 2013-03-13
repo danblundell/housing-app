@@ -113,6 +113,11 @@
 		this.link = ko.observable();
 		this.nextQ = ko.observable();
 		this.tooltip = ko.observable();
+		this.tooltipOn = ko.observable(false);
+		this.toggleTooltip = function(e){
+			(!self.tooltipOn()) ? self.tooltipOn(true) : self.tooltipOn(false);
+			e.preventDefault();
+		}
 	};
 
 
@@ -482,7 +487,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 30 //6A
+					"next" : 35
 				}
 			]
 		},
@@ -495,7 +500,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 30 //6C
+					"next" : 39
 				}
 			]
 		},
@@ -525,7 +530,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 30 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "No",
@@ -538,7 +543,7 @@
 			"answers" : [
 				{
 					"answer" : "You are you about to leave care or your foster placement is ending? ",
-					"next" : 2 //question 10
+					"next" : 50
 				},
 				{
 					"answer" : "You are being discharged from hospital or supported housing and have nowhere to live or your accommodation is unsuitable for you to live in",
@@ -563,7 +568,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 30 //6A
+					"next" : 35
 				}
 			]
 		},
@@ -572,12 +577,12 @@
 			"answers" : [
 				{
 					"answer" : "I'm overcrowded in my home",
-					"next" : 36 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "My home lacks basic facilities",
 					"info" : "working toilet, washing facilities, hot water, kitchen, heating.",
-					"next" : 36 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
@@ -619,7 +624,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 36//6C
+					"next" : 39
 				}
 			]
 		},
@@ -628,15 +633,15 @@
 			"answers" : [
 				{
 					"answer" : "A child or children who are under 16",
-					"next" : 36 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "Someone who is dependent on you for care",
-					"next" : 36 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "I am expecting a baby",
-					"next" : 36 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "None of the above",
@@ -650,12 +655,12 @@
 				{
 					"answer" : "My accommodation is not suitable, or unreasonable to live in due to my medical needs",
 					"info" : "medical needs info",
-					"next" : 28 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "There is a serious risk to my health or wellbeing if I stay in my current accommodation",
 					"info" : "health and wellbeing info",
-					"next" : 28 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "I need to move to be able to provide care for someone",
@@ -670,16 +675,16 @@
 				{
 					"answer" : "I need to move to take up an employment or training opportunity",
 					"info" : "employment or training description",
-					"next" : 28 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "I have another specific medical or welfare reason for needing to move",
 					"info" : "medical or welfare definition",
-					"next" : 28 //6C
+					"next" : 39
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 36 //6C
+					"next" : 39
 				}
 			]
 		},
@@ -702,24 +707,24 @@
 				{
 					"answer" : "I am under-occupying my property?",
 					"info" : "under-occupying description",
-					"next" : 36 //6c
+					"next" : 39
 				},
 				{
 					"answer" : "My property has been designated as ‘sheltered housing’ and I do not need and/or qualify for this facility",
 					"info" : "sheltered housing description",
-					"next" : 36 //6c
+					"next" : 39
 				},
 				{
 					"answer" : "My property has been specially adapted and I no longer/do not need the adaptations",
-					"next" : 36 //6c
+					"next" : 39
 				},
 				{
 					"answer" : "I have been asked to move because my home requires major work within the next 6 weeks",
-					"next" : 36 //6c
+					"next" : 39
 				},
 				{
 					"answer" : "I am a service tenant due to retire or have your contract of employment terminated",
-					"next" : 36 //6c
+					"next" : 39
 				},
 				{
 					"answer" : "None of the above",
@@ -766,7 +771,7 @@
 				}
 			]
 		},
-		{//6B (36)
+		{//6B (38)
 			"question" : "Did you or a joint applicant live in the Borough of Northampton for at least 6 out of the last 12 months or 3 out of the last 5 years prior to leaving Northampton",
 			"answers" : [
 				{
@@ -779,7 +784,7 @@
 				}
 			]
 		},
-		{//6B.1 (37)
+		{//6B.1 (39)
 			"question" : "Did you or a joint applicant work in the Borough of Northampton prior to leaving Northampton?",
 			"answers" : [
 				{
@@ -792,7 +797,7 @@
 				}
 			]
 		},
-		{//6B.1.1 (38)
+		{//6B.1.1 (40)
 			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
 			"answers" : [
 				{
@@ -805,12 +810,12 @@
 				}
 			]
 		},
-		{//6C (39)
+		{//6C (41)
 			"question" : "Have you lived in the Northampton area for at least three out of the last five years?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45 //10
+					"next" : 50 //10
 				},
 				{
 					"answer" : "No",
@@ -818,12 +823,12 @@
 				}
 			]
 		},
-		{//6C.1 (40)
+		{//6C.1 (42)
 			"question" : "Do you work in Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45 //10
+					"next" : 50 //10
 				},
 				{
 					"answer" : "No",
@@ -831,12 +836,12 @@
 				}
 			]
 		},
-		{//6C1.1 (41)
+		{//6C1.1 (43)
 			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45 //10
+					"next" : 50 //10
 				},
 				{
 					"answer" : "No",
@@ -844,7 +849,7 @@
 				}
 			]
 		},
-		{//6D (42)
+		{//6D (44)
 			"question" : "Did you live in the Borough of Northampton for at least 3 out of th elast 5 years prior to leaving Northampton?",
 			"answers" : [
 				{
@@ -857,12 +862,12 @@
 				}
 			]
 		},
-		{//6D.1 (43)
+		{//6D.1 (45)
 			"question" : "Did you work in the Borough of Northampton prior to leaving Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45 //10
+					"next" : 50 //10
 				},
 				{
 					"answer" : "No",
@@ -870,12 +875,12 @@
 				}
 			]
 		},
-		{//6D1.1 (44)
+		{//6D1.1 (46)
 			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 45 //10
+					"next" : 50 //10
 				},
 				{
 					"answer" : "No",
@@ -883,7 +888,7 @@
 				}
 			]
 		},
-		{//9B (45)
+		{//9B (47)
 			"question" : "Do you need to move to a larger home to accommodate a 'looked after' child?",
 			"answers" : [
 				{
@@ -896,7 +901,7 @@
 				}
 			]
 		},
-		{//9B.1 (46)
+		{//9B.1 (48)
 			"question" : "Which of the following apply to you?",
 			"answers" : [
 				{
@@ -915,7 +920,7 @@
 				}
 			]
 		},
-		{//9B.2 (47)
+		{//9B.2 (49)
 			"question" : "Do any the following apply to you?",
 			"answers" : [
 				{
@@ -944,7 +949,7 @@
 				}
 			]
 		},
-		{//10 (48)
+		{//10 (50)
 			"question" : "Do you have more than £30,000 household income (for a single person household) or more than £50,000 income (for a family household)?",
 			"answers" : [
 				{
@@ -957,7 +962,7 @@
 				}
 			]
 		},
-		{//10.1 (49)
+		{//10.1 (51)
 			"question" : "Do you have more than £16,000 in assets (single applicant) or more than £32,000 in assets (joint applicants)?",
 			"answers" : [
 				{

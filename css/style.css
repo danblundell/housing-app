@@ -13,16 +13,16 @@ body {
 .question ul {
   text-align: left; }
 
-.answers a, .apply a {
+.answers a, .apply a, .tooltip-content a {
   display: block;
   margin: 0 auto 8px;
   z-index: 9999; }
-  .answers a:hover, .apply a:hover {
+  .answers a:hover, .apply a:hover, .tooltip-content a:hover {
     text-decoration: none;
     color: white; }
-  .answers a:visited, .apply a:visited {
+  .answers a:visited, .apply a:visited, .tooltip-content a:visited {
     color: white; }
-  .answers a:active, .apply a:active {
+  .answers a:active, .apply a:active, .tooltip-content a:active {
     color: white; }
 
 .answer {
@@ -42,7 +42,7 @@ body {
 .tooltip {
   width: 50px;
   position: absolute;
-  top: 17.5%;
+  top: 6px;
   right: 0px;
   padding: 4px 0;
   background: #f1f2f2;
@@ -70,3 +70,24 @@ body {
     width: 70px;
     right: -20px;
     background: #64797f; }
+
+.tooltip-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); }
+
+.tooltip-content {
+  background: #f1f2f2;
+  border: 1px solid #d1d3d4;
+  color: #64797f;
+  padding: 2em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 10% auto 0;
+  width: 50%; }
+  .tooltip-content div {
+    margin-bottom: 1em; }
