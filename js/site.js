@@ -443,28 +443,35 @@
 			"question" : "Which of the following best describes your current housing situation?",
 			"answers" : [
 				{
-					"answer" : "I/We are <a href='#'>homeless</a>",
-					"next" : 20
+					"answer" : "I/We are homeless",
+					"info" : "homeless description",
+					"next" : 22
 				},
 				{
 					"answer" : "I/We have a home but I am unable to live in it due to fire, flood or other emergency",
-					"next" : 20
+					"next" : 22
 				},
 				{
 					"answer" : "I/We have somewhere to live at the moment but I am <a href='#'>threatened with homelessness</a>",
-					"next" : 21
+					"info" : "threatened with homelessness description",
+					"next" : 24
 				},
 				{
-					"answer" : "I/We have somewhere to live but have nowhere I can live together with my <a href='#'>immediate family</a> ",
-					"next" : 20
+					"answer" : "I/We are living in temporary accommodation (e.g. Bed and Breakfast)",
+					"next" : 22
+				},
+				{
+					"answer" : "I/We have somewhere to live but have nowhere I can live together with my immediate family",
+					"info" : "immediate family description",
+					"next" : 23
 				},
 				{
 					"answer" : "I/We have somewhere to live and am not threatened with homelessness",
-					"next" : 25
+					"next" : 28 
 				}
 			]
 		},
-		{//5.1 (20)
+		{//5.1 (22)
 			"question" : "Do you have any home anywhere in the UK or abroad?",
 			"answers" : [
 				{
@@ -473,202 +480,123 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 30
+					"next" : 30 //6A
 				}
 			]
 		},
-		{//5.2 (21)
+		{//5.1b (23)
+			"question" : "Do you have any home that you can live in with your immediate family in the UK or abroad?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+				},
+				{
+					"answer" : "No",
+					"next" : 30 //6C
+				}
+			]
+		},
+		{//5.2 (24)
 			"question" : "Do you have any of the following armed forces connections?",
 			"answers" : [
 				{
 					"answer" : "I have been discharged from the Armed Forces within the last 5 years",
-					"next" : 48
+					"next" : 100
 				},
 				{
 					"answer" : "I am being discharged from the Armed Forces",
-					"next" : 48
+					"next" : 100
 				},
 				{
 					"answer" : "I am the spouse or civil partner of a recently deceased member of the Armed Forces",
-					"next" : 48
+					"next" : 100
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 22
+					"next" : 25
 				}
 			]
 		},
-		{//5.2.1 (22)
-			"question" : "Do any of the following apply to you now or within the next 4 weeks?<ul><li>You have been given a 'Notice to Quit'</li><li>You have been asked to leave your home (but aren't leaving the Armed Forces</li><li>You are being evicted</li><li>Your property is being reposessed</li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or temorary accommodation</li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a Compulsory Purchase Order (CPO)</li><li>You have been asked to leave your 'tied' accommodation</li><li>You have been asked to vacate your home as a result of enforcement by the Local Authority</li></ul>",
+		{//5.2.1 (25)
+			"question" : "Do any of the following apply to you now or within the next 8 weeks?<ul><li>You have been given a 'Notice to Quit'</li><li>You have been asked to leave your home (but aren't leaving the Armed Forces</li><li>You are being evicted</li><li>Your property is being reposessed</li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or temorary accommodation</li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a Compulsory Purchase Order (CPO)</li><li>You have been asked to leave your 'tied' accommodation</li><li>You have been asked to vacate your home as a result of enforcement by the Local Authority</li></ul>",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 30
+					"next" : 30 //6C
 				},
 				{
 					"answer" : "No",
-					"next" : 23
+					"next" : 26
 				}
 			]
 		},
-		{//5.2.1.1 (23)
-			"question" : "Do any of the following apply to you?<ul><li>I am about to leave care or your foster placement is ending</li><li>I am being discharged from hospital and have nowhere to live</li><li>I am being released from prison and have nowhere to live</li></ul>",
+		{//5.2.1.1 (26)
+			"question" : "Do any of the following apply to you?",
 			"answers" : [
 				{
-					"answer" : "Yes",
-					"next" : 24
+					"answer" : "You are you about to leave care or your foster placement is ending? ",
+					"next" : 2 //question 10
 				},
 				{
-					"answer" : "No",
+					"answer" : "You are being discharged from hospital or supported housing and have nowhere to live or your accommodation is unsuitable for you to live in",
+					"next" : 27
+				},
+				{
+					"answer" : "You are being released from prison and have nowhere to live",
+					"next" : 27
+				},
+				{
+					"answer" : "None of the above",
 					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
-		{//5.2.1.1.1 (24)
+		{//5.2.1.1.1 (27)
 			"question" : "Have you been residing outside the Borough of Northampton after being place there through no choice of your own?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 33
+					"next" : 33 //6B
 				},
 				{
 					"answer" : "No",
-					"next" : 30
+					"next" : 30 //6A
 				}
 			]
 		},
-		{//5.3 (25)
+		{//5.3 (28)
 			"question" : "Which of the following apply to you?",
 			"answers" : [
 				{
 					"answer" : "I'm overcrowded in my home",
-					"next" : 36
+					"next" : 36 //6C
 				},
 				{
 					"answer" : "My home lacks basic facilities",
-					"next" : 36
+					"info" : "working toilet, washing facilities, hot water, kitchen, heating.",
+					"next" : 36 //6C
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
-					"next" : 47
+					"next" : 47 //5.3.1X
 				},
 				{
 					"answer" : "My accommodation is not suitable for medical reasons",
-					"next" : 26
-				},
-				{
-					"answer" : "I need to move because of a risk to my welfare",
-					"next" : 26
-				},
-				{
-					"answer" : "None of the above",
-					"next" : 28
-				}
-			]
-		},
-		{//5.3.1 (26)
-			"question" : "Do you need to move because you are suffering severe harassment or violence in your current accommodation?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
-				},
-				{
-					"answer" : "No",
-					"next" : 27
-				}
-			]
-		},
-		{//5.3.1.1 (27)
-			"question" : "Do any of the following apply to you?",
-			"answers" : [
-				{
-					"answer" : "My accommodation is not suitable, or unreasonable to live in due to my medical needs",
-					"next" : 28
-				},
-				{
-					"answer" : "There is a serious risk to my health or wellbeing if I stay in my current accommodation",
-					"next" : 28
-				},
-				{
-					"answer" : "I need to move to be able to provide care for someone",
-					"next" : 28
-				},
-				{
-					"answer" : "I need to move to be able to receive care",
-					"next" : 28
-				},
-				{
-					"answer" : "I need to move to take up an employment or training opportunity",
-					"next" : 28
-				},
-				{
-					"answer" : "I have another specific medical or welfare reason for needing to move",
-					"next" : 28
-				},
-				{
-					"answer" : "None of the above",
-					"next" : 36
-				}
-			]
-		},
-		{//9A (28)
-			"question" : "Are you an NBC Tenant or a Tenant of an NBC-partner Housing Association?",
-			"answers" : [
-				{
-					"answer" : "Yes",
 					"next" : 29
 				},
 				{
-					"answer" : "No",
-					"next" : 42
-				}
-			]
-		},
-		{//9A.1 (29)
-			"question" : "Do any of the following apply to you?",
-			"answers" : [
-				{
-					"answer" : "I am under-occupying my property?",
-					"next" : 36
-				},
-				{
-					"answer" : "My property has been designated as ‘sheltered housing’ and I do not need and/or qualify for this facility",
-					"next" : 36
-				},
-				{
-					"answer" : "My property has been specially adapted and I no longer/do not need the adaptations",
-					"next" : 36
-				},
-				{
-					"answer" : "I have been asked to move because my home requires major work within the next 6 weeks",
-					"next" : 36
-				},
-				{
-					"answer" : "I am a service tenant due to retire or have your contract of employment terminated",
-					"next" : 36
+					"answer" : "I need to move because of a risk to my welfare",
+					"next" : 29
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 42
+					"next" : 33
 				}
 			]
 		},
-		{//6A (30)
-			"question" : "Have you lived in the Northampton area for at least SIX out of the last TWELVE months or THREE out of the last FIVE years?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
-				},
-				{
-					"answer" : "No",
-					"next" : 31
-				}
-			]
-		},
-		{//6A.1 (31)
-			"question" : "Do you (or a joint applicant) work in the Borough of Northampton?",
+		{//5.3.1 (29)
+			"question" : "Do you need to move because you are suffering severe harassment or violence in your current accommodation?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -680,7 +608,150 @@
 				}
 			]
 		},
-		{//6A1.1 (32)
+		{//5.3.1X (30)
+			"question" : "Are you sharing with members of your immediate family (parents, children, brothers or sisters)?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 31
+				},
+				{
+					"answer" : "No",
+					"next" : 36//6C
+				}
+			]
+		},
+		{//5.3.1X.1 (31)
+			"question" : "Are you applying for housing with any of the following",
+			"answers" : [
+				{
+					"answer" : "A child or children who are under 16",
+					"next" : 36 //6C
+				},
+				{
+					"answer" : "Someone who is dependent on you for care",
+					"next" : 36 //6C
+				},
+				{
+					"answer" : "I am expecting a baby",
+					"next" : 36 //6C
+				},
+				{
+					"answer" : "None of the above",
+					"link" : "http://northampton.gov.uk/10"
+				}
+			]
+		},
+		{//5.3.1.1 (32)
+			"question" : "Do any of the following apply to you?",
+			"answers" : [
+				{
+					"answer" : "My accommodation is not suitable, or unreasonable to live in due to my medical needs",
+					"info" : "medical needs info",
+					"next" : 28 //6C
+				},
+				{
+					"answer" : "There is a serious risk to my health or wellbeing if I stay in my current accommodation",
+					"info" : "health and wellbeing info",
+					"next" : 28 //6C
+				},
+				{
+					"answer" : "I need to move to be able to provide care for someone",
+					"info" : "care definition",
+					"next" : 33
+				},
+				{
+					"answer" : "I need to move to be able to receive care",
+					"info" : "care definition",
+					"next" : 33
+				},
+				{
+					"answer" : "I need to move to take up an employment or training opportunity",
+					"info" : "employment or training description",
+					"next" : 28 //6C
+				},
+				{
+					"answer" : "I have another specific medical or welfare reason for needing to move",
+					"info" : "medical or welfare definition",
+					"next" : 28 //6C
+				},
+				{
+					"answer" : "None of the above",
+					"next" : 36 //6C
+				}
+			]
+		},
+		{//9A (33)
+			"question" : "Are you an NBC Tenant or a Tenant of an NBC-partner Housing Association?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 34
+				},
+				{
+					"answer" : "No",
+					"next" : 42 //9B
+				}
+			]
+		},
+		{//9A.1 (34)
+			"question" : "Do any of the following apply to you?",
+			"answers" : [
+				{
+					"answer" : "I am under-occupying my property?",
+					"info" : "under-occupying description",
+					"next" : 36 //6c
+				},
+				{
+					"answer" : "My property has been designated as ‘sheltered housing’ and I do not need and/or qualify for this facility",
+					"info" : "sheltered housing description",
+					"next" : 36 //6c
+				},
+				{
+					"answer" : "My property has been specially adapted and I no longer/do not need the adaptations",
+					"next" : 36 //6c
+				},
+				{
+					"answer" : "I have been asked to move because my home requires major work within the next 6 weeks",
+					"next" : 36 //6c
+				},
+				{
+					"answer" : "I am a service tenant due to retire or have your contract of employment terminated",
+					"next" : 36 //6c
+				},
+				{
+					"answer" : "None of the above",
+					"next" : 42 //9B
+				}
+			]
+		},
+		{//6A (35)
+			"question" : "Have you lived in the Northampton area for at least SIX out of the last TWELVE months or THREE out of the last FIVE years?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
+				},
+				{
+					"answer" : "No",
+					"next" : 36
+				}
+			]
+		},
+		{//6A.1 (36)
+			"question" : "Do you work in the Borough of Northampton?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1781/homelessness_team"
+				},
+				{
+					"answer" : "No",
+					"next" : 37
+				}
+			]
+		},
+		{//6A1.1 (37)
 			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
 			"answers" : [
 				{
@@ -693,7 +764,7 @@
 				}
 			]
 		},
-		{//6B (33)
+		{//6B (36)
 			"question" : "Did you or a joint applicant live in the Borough of Northampton for at least 6 out of the last 12 months or 3 out of the last 5 years prior to leaving Northampton",
 			"answers" : [
 				{
@@ -706,7 +777,7 @@
 				}
 			]
 		},
-		{//6B.1 (34)
+		{//6B.1 (37)
 			"question" : "Did you or a joint applicant work in the Borough of Northampton prior to leaving Northampton?",
 			"answers" : [
 				{
@@ -719,7 +790,7 @@
 				}
 			]
 		},
-		{//6B.1.1 (35)
+		{//6B.1.1 (38)
 			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
 			"answers" : [
 				{
@@ -732,7 +803,7 @@
 				}
 			]
 		},
-		{//6C (36)
+		{//6C (39)
 			"question" : "Have you or a joint applicant lived in the Northampton area for at least three out of the last five years?",
 			"answers" : [
 				{
@@ -745,7 +816,7 @@
 				}
 			]
 		},
-		{//6C.1 (37)
+		{//6C.1 (40)
 			"question" : "Do you or a joint applicant work in Northampton?",
 			"answers" : [
 				{
