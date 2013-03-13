@@ -281,56 +281,42 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 10
+					"next" : 11
 				},
 				{
 					"answer" : "No",
-					"next" :  11
+					"next" :  13
 				}
 			]
 		},
-		{//4.1 (10)
+		{//4.1 (11)
 			"question" : "Do you live in the <a href='#'>United Kingdom</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 19 
+					"next" : 21
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+					"next" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
-		{//4.2 (11)
+		{//4.1.1 (12)
+			"question" : "Are you serving in HM Forces?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 21
+				},
+				{
+					"answer" : "No",
+					"next" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+				}
+			]
+		},
+		{//4.2 (13)
 			"question" : "Are you a <a href='#'>Commonwealth Citizen</a>?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 12
-				},
-				{
-					"answer" : "No",
-					"next" : 13
-				}
-			]
-		},
-		{//4.2.1 (12)
-			"question" : "Do you have a <a href='#'>right of abode</a> in the <a href='#'>United Kingdom</a>?",
-			"answers" : [
-				{
-					"answer" : "Yes",
-					"next" : 10
-				},
-				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
-				}
-			]
-		},
-		{//4.2.2 (13)
-			"question" : "Are you an EEA/EU National?",
-			"infoLink" : "http://www.housing-rights.info/EEA-nationals.php",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -338,43 +324,29 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 16
-				}
-			]
-		},
-		{//4.2.2.1 (14)
-			"question" : "Have you worked in the United Kingdom at any time – now or in the past?",
-			"answers" : [
-				{
-					"answer" : "Yes",
 					"next" : 15
-				},
-				{
-					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1778/citizenship_3"
 				}
 			]
 		},
-		{//4.2.2.1.1 (15)
-			"question" : "Are you <a href='#'>working now</a>, <a href='#'>temporarily out of work</a> or a <a href='#'>retired worker</a>?",
+		{//4.2.1 (14)
+			"question" : "Do you have a <a href='#'>right of abode</a> in the <a href='#'>United Kingdom</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 19
+					"next" : 11
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1778/citizenship_3"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
 				}
 			]
 		},
-		{//4.2.2.2 (16)
-			"question" : "Are you a citizen of Bulgaria or Romania (A2 countries)?",
-			"infoLink" : "http://www.housing-rights.info/02_8_Bulgarians_Romanians.php",
+		{//4.2.2 (15)
+			"question" : "Are you an <a href='http://www.housing-rights.info/EEA-nationals.php'>EEA/EU National?</a>",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 17
+					"next" : 16
 				},
 				{
 					"answer" : "No",
@@ -382,9 +354,34 @@
 				}
 			]
 		},
-		{//4.2.2.2.1 (17)
-			"question" : "Are you currently working in the UK AND authorised to work (or exempt from authorisation)?",
-			"infoLink" : "http://www.housing-rights.info/02_8_Bulgarians_Romanians.php",
+		{//4.2.2.1 (16)
+			"question" : "Have you worked in the United Kingdom at any time – now or in the past?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 17
+				},
+				{
+					"answer" : "No",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1778/citizenship_3"
+				}
+			]
+		},
+		{//4.2.2.1.1 (17)
+			"question" : "Are you <a href='#'>working now</a>, <a href='#'>temporarily out of work</a> or a <a href='#'>retired worker</a>?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 21
+				},
+				{
+					"answer" : "No",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1778/citizenship_3"
+				}
+			]
+		},
+		{//4.2.2.2 (18)
+			"question" : "Are you a citizen of <a href='http://www.housing-rights.info/02_8_Bulgarians_Romanians.php'>Bulgaria or Romania (A2 countries)</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -392,36 +389,49 @@
 				},
 				{
 					"answer" : "No",
+					"next" : 20
+				}
+			]
+		},
+		{//4.2.2.2.1 (19)
+			"question" : "Are you currently working in the UK AND authorised to work?",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 21
+				},
+				{
+					"answer" : "No",
 					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1779/citizenship_4"
 				}
 			]
 		},
-		{//4.2.2.2.2 (18)
+		{//4.2.2.2.2 (20)
 			"question" : "Do you have one of the following status",
 			"answers" : [
 				{
 					"answer" : "Refugee",
-					"next" : 19
+					"next" : 21
 				},
 				{
 					"answer" : "Humanitarian protection",
-					"next" : 19
+					"next" : 21
 				},
 				{
 					"answer" : "Discretionary leave to remain",
-					"next" : 19
+					"next" : 21
 				},
 				{
 					"answer" : "Exceptional leave to remain",
-					"next" : 19
+					"next" : 21
 				},
 				{
 					"answer" : "Limited Leave to remain",
-					"next" : 19
+					"next" : 21
 				},
 				{
 					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
-					"next" : 19
+					"next" : 21
 				},
 				{
 					"answer" : "None of the above",
@@ -429,7 +439,7 @@
 				}
 			]
 		},
-		{//5 (19)
+		{//5 (21)
 			"question" : "Which of the following best describes your current housing situation?",
 			"answers" : [
 				{
