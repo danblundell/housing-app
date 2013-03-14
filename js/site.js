@@ -459,7 +459,7 @@
 					"next" : 22
 				},
 				{
-					"answer" : "I/We have somewhere to live at the moment but I am <a href='#'>threatened with homelessness</a>",
+					"answer" : "I/We have somewhere to live at the moment but I am threatened with homelessness",
 					"info" : "threatened with homelessness description",
 					"next" : 24
 				},

@@ -8,6 +8,12 @@ body {padding:0;}
   padding:1em;
 }
 .question{
+  a{
+    border-bottom:1px solid;
+    &:hover{
+      text-decoration: none;
+    }
+  }
   ul{
     text-align: left;
   }
@@ -17,7 +23,7 @@ body {padding:0;}
   a{
     display:block;
     margin:0 auto 8px;
-    z-index: 9999;
+    color:$color-white;
     &:hover{
       text-decoration: none;
       color:$color-white;

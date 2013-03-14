@@ -10,13 +10,17 @@ body {
   text-align: center;
   padding: 1em; }
 
+.question a {
+  border-bottom: 1px solid; }
+  .question a:hover {
+    text-decoration: none; }
 .question ul {
   text-align: left; }
 
 .answers a, .apply a, .tooltip-content a {
   display: block;
   margin: 0 auto 8px;
-  z-index: 9999; }
+  color: white; }
   .answers a:hover, .apply a:hover, .tooltip-content a:hover {
     text-decoration: none;
     color: white; }
