@@ -9,6 +9,7 @@
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
 		this.ready = ko.observable(false);
+		this.pmDomain = "http://localhost";
 		
 
 		/**
@@ -17,7 +18,7 @@
 		* fallback for IE7 to open a new window
 		*/
 		this.sendMessageToParent = function(url) {
-			(window.postMessage !== undefined) ? window.parent.postMessage(url,"http://localhost") : window.open(url);
+			(window.postMessage !== undefined) ? window.parent.postMessage(url,self.pmDomain) : window.open(url);
 		};
 
 		//move to the next question
@@ -54,7 +55,7 @@
 		};
 
 		//sets up the model objects and properties
-		this.init = function (data) {
+		this.init = function (data, container) {
 
 			//take a reference to the data
 			var questions = data;
@@ -96,7 +97,12 @@
 
 			//set up hash change listener
 			self.hashChanges();
+
+			//confirm everything's loaded
 			self.ready(true);
+
+			//if everything's loaded, show the new content
+			(self.ready()) ? document.getElementById(container).className = "" : self.ready(false);
 		};
 
 	}
@@ -979,7 +985,7 @@
 		}
 	];
 
-	var app = new nbcApp.models.App();
-	app.init(json);
+	var app = new nbcApp.models.App()
+	app.init(json,'container');
 	ko.applyBindings(app);
 })();

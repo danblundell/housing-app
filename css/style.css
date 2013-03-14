@@ -6,9 +6,15 @@
 body {
   padding: 0; }
 
-.questions, .apply {
+.hidden {
+  display: none; }
+
+.questions, .apply, .loading {
   text-align: center;
   padding: 1em; }
+
+.loading p {
+  font-style: italic; }
 
 .question a {
   border-bottom: 1px solid; }
