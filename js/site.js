@@ -8,6 +8,7 @@
 		this.questions = ko.observableArray();
 		this.currentQ = ko.observable(0);
 		this.apply = ko.observable(false);
+		this.ready = ko.observable(false);
 		
 
 		/**
@@ -95,6 +96,7 @@
 
 			//set up hash change listener
 			self.hashChanges();
+			self.ready(true);
 		};
 
 	}
@@ -134,11 +136,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 1
+					"next" : 1 //2A.1
 				},
 				{
 					"answer" : "No",
-					"next" : 6
+					"next" : 6 //2B
 				}
 			]
 		},
@@ -147,11 +149,11 @@
 			"answers" : [
 				{
 					"answer" : "Tell us about a change to your circumstances",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1299/housing_allocations-change_in_circumstances"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1299/housing_allocations-change_in_circumstances" //COC form
 				},
 				{
 					"answer" : "Enquire about the progress to your application",
-					"next" : 2
+					"next" : 2 //2A1.1
 				},
 				{
 					"answer" : "Discuss something else",
@@ -177,15 +179,15 @@
 			"answers" : [
 				{
 					"answer" : "Request that you bring in documents as proof of identity, eligibility, residence and/or current circumstances?",
-					"next" : 4
+					"next" : 4 //2A.1.1.1.1
 				},
 				{
 					"answer" : "Tell you about your place on the register and/or your banding?",
-					"next" : 5
+					"next" : 5 //2A.1.1.1.2
 				},
 				{
 					"answer" : "Ask you to clarify any details about your application?",
-					"next" : 6
+					"next" : 6 //2B
 				}
 			]
 		},
@@ -220,11 +222,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 7
+					"next" : 7 //2B.1
 				},
 				{
 					"answer" : "No",
-					"next" : 9
+					"next" : 9 //3
 				}
 			]
 		},
@@ -237,22 +239,22 @@
 				},
 				{
 					"answer" : "I am overcrowded in my home",
-					"next" : 8,
+					"next" : 8, //2B.1.1
 					"info" : "overcrowded info"
 				},
 				{
 					"answer" : "I need to move for a severe medical or welfare reason",
-					"next" : 8,
+					"next" : 8, //2B.1.1
 					"info" : "severe medical or welfare reason"
 				},
 				{
 					"answer" : "My home lacks basic facilities",
-					"next" : 8,
+					"next" : 8, //2B.1.1
 					"info" : "basic facilities"
 				},
 				{
 					"answer" : "I want to move for another reason",
-					"next" : 8
+					"next" : 8 //2B.1.1
 				}
 			]
 		},
@@ -265,7 +267,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : "go to question 5" 
+					"next" : 21 //5
 				}
 			]
 		},
@@ -278,7 +280,7 @@
 				},
 				{
 					"answer" : "16 or over",
-					"next" : 10
+					"next" : 10 //4
 				}
 				
 			]
@@ -288,11 +290,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 11
+					"next" : 11 //4.1
 				},
 				{
 					"answer" : "No",
-					"next" :  13
+					"next" :  13 //4.2
 				}
 			]
 		},
@@ -301,7 +303,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "No",
@@ -314,7 +316,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "No",
@@ -327,11 +329,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 14
+					"next" : 14 //4.2.1
 				},
 				{
 					"answer" : "No",
-					"next" : 15
+					"next" : 15 //4.2.2
 				}
 			]
 		},
@@ -340,7 +342,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 11
+					"next" : 11 //4.1
 				},
 				{
 					"answer" : "No",
@@ -353,11 +355,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 16
+					"next" : 16 //4.2.2.1
 				},
 				{
 					"answer" : "No",
-					"next" : 18
+					"next" : 18 //4.2.2.2
 				}
 			]
 		},
@@ -366,7 +368,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 17
+					"next" : 17 //4.2.2.1.1
 				},
 				{
 					"answer" : "No",
@@ -379,7 +381,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "No",
@@ -392,11 +394,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 19
+					"next" : 19 //4.2.2.2.1
 				},
 				{
 					"answer" : "No",
-					"next" : 20
+					"next" : 20 //4.2.2.2.2
 				}
 			]
 		},
@@ -405,7 +407,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "No",
@@ -418,27 +420,27 @@
 			"answers" : [
 				{
 					"answer" : "Refugee",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "Humanitarian protection",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "Discretionary leave to remain",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "Exceptional leave to remain",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "Limited Leave to remain",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
-					"next" : 21
+					"next" : 21 //5
 				},
 				{
 					"answer" : "None of the above",
@@ -452,29 +454,29 @@
 				{
 					"answer" : "I/We are homeless",
 					"info" : "homeless description",
-					"next" : 22
+					"next" : 22 //5.1
 				},
 				{
 					"answer" : "I/We have a home but I am unable to live in it due to fire, flood or other emergency",
-					"next" : 22
+					"next" : 22 //5.1
 				},
 				{
 					"answer" : "I/We have somewhere to live at the moment but I am threatened with homelessness",
 					"info" : "threatened with homelessness description",
-					"next" : 24
+					"next" : 24 //5.2
 				},
 				{
 					"answer" : "I/We are living in temporary accommodation (e.g. Bed and Breakfast)",
-					"next" : 22
+					"next" : 22 //5.1
 				},
 				{
 					"answer" : "I/We have somewhere to live but have nowhere I can live together with my immediate family",
 					"info" : "immediate family description",
-					"next" : 23
+					"next" : 23 //5.1b
 				},
 				{
 					"answer" : "I/We have somewhere to live and am not threatened with homelessness",
-					"next" : 28 
+					"next" : 28 //5.3 
 				}
 			]
 		},
@@ -487,7 +489,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 35
+					"next" : 35 //6A
 				}
 			]
 		},
@@ -500,7 +502,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 39
+					"next" : 41 //6C
 				}
 			]
 		},
@@ -509,19 +511,19 @@
 			"answers" : [
 				{
 					"answer" : "I have been discharged from the Armed Forces within the last 5 years",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "I am being discharged from the Armed Forces",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "I am the spouse or civil partner of a recently deceased member of the Armed Forces",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 25
+					"next" : 25 //5.2.1
 				}
 			]
 		},
@@ -530,11 +532,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "No",
-					"next" : 26
+					"next" : 26 //5.2.1.1
 				}
 			]
 		},
@@ -543,15 +545,15 @@
 			"answers" : [
 				{
 					"answer" : "You are you about to leave care or your foster placement is ending? ",
-					"next" : 50
+					"next" : 50 //10
 				},
 				{
 					"answer" : "You are being discharged from hospital or supported housing and have nowhere to live or your accommodation is unsuitable for you to live in",
-					"next" : 27
+					"next" : 27 //5.2.1.1.1  
 				},
 				{
 					"answer" : "You are being released from prison and have nowhere to live",
-					"next" : 27
+					"next" : 27 //5.2.1.1.1 
 				},
 				{
 					"answer" : "None of the above",
@@ -564,11 +566,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 33 //6B
+					"next" : 38 //6B
 				},
 				{
 					"answer" : "No",
-					"next" : 35
+					"next" : 35 //6A
 				}
 			]
 		},
@@ -577,28 +579,28 @@
 			"answers" : [
 				{
 					"answer" : "I'm overcrowded in my home",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "My home lacks basic facilities",
 					"info" : "working toilet, washing facilities, hot water, kitchen, heating.",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
-					"next" : 47 //5.3.1X
+					"next" : 30 //5.3.1X
 				},
 				{
 					"answer" : "My accommodation is not suitable for medical reasons",
-					"next" : 29
+					"next" : 29 //5.3.1
 				},
 				{
 					"answer" : "I need to move because of a risk to my welfare",
-					"next" : 29
+					"next" : 29 //5.3.1
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 33
+					"next" : 33 //9A
 				}
 			]
 		},
@@ -611,7 +613,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 32
+					"next" : 32 //5.3.1.1
 				}
 			]
 		},
@@ -620,11 +622,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 31
+					"next" : 31 //5.3.1X.1
 				},
 				{
 					"answer" : "No",
-					"next" : 39
+					"next" : 41 //6C
 				}
 			]
 		},
@@ -633,15 +635,15 @@
 			"answers" : [
 				{
 					"answer" : "A child or children who are under 16",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "Someone who is dependent on you for care",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I am expecting a baby",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "None of the above",
@@ -655,36 +657,36 @@
 				{
 					"answer" : "My accommodation is not suitable, or unreasonable to live in due to my medical needs",
 					"info" : "medical needs info",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "There is a serious risk to my health or wellbeing if I stay in my current accommodation",
 					"info" : "health and wellbeing info",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I need to move to be able to provide care for someone",
 					"info" : "care definition",
-					"next" : 33
+					"next" : 33 //9A
 				},
 				{
 					"answer" : "I need to move to be able to receive care",
 					"info" : "care definition",
-					"next" : 33
+					"next" : 33 //9A
 				},
 				{
 					"answer" : "I need to move to take up an employment or training opportunity",
 					"info" : "employment or training description",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I have another specific medical or welfare reason for needing to move",
 					"info" : "medical or welfare definition",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 39
+					"next" : 41 //6C
 				}
 			]
 		},
@@ -693,11 +695,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 34
+					"next" : 34 //9A.1
 				},
 				{
 					"answer" : "No",
-					"next" : 42 //9B
+					"next" : 47 //9B
 				}
 			]
 		},
@@ -707,28 +709,28 @@
 				{
 					"answer" : "I am under-occupying my property?",
 					"info" : "under-occupying description",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "My property has been designated as ‘sheltered housing’ and I do not need and/or qualify for this facility",
 					"info" : "sheltered housing description",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "My property has been specially adapted and I no longer/do not need the adaptations",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I have been asked to move because my home requires major work within the next 6 weeks",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I am a service tenant due to retire or have your contract of employment terminated",
-					"next" : 39
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 42 //9B
+					"next" : 47 //9B
 				}
 			]
 		},
@@ -741,7 +743,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 36
+					"next" : 36 //6A.1
 				}
 			]
 		},
@@ -754,7 +756,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 37
+					"next" : 37 //6A.1.1
 				}
 			]
 		},
@@ -780,7 +782,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 37
+					"next" : 39 //6B.1
 				}
 			]
 		},
@@ -793,7 +795,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 38
+					"next" : 40 //6B.1.1
 				}
 			]
 		},
@@ -819,7 +821,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 37
+					"next" : 42 //6C.1
 				}
 			]
 		},
@@ -832,7 +834,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 41
+					"next" : 43 //6C1.1
 				}
 			]
 		},
@@ -854,11 +856,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "No",
-					"next" : 43
+					"next" : 45 //6D.1
 				}
 			]
 		},
@@ -871,7 +873,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 44
+					"next" : 46 //6D.1.1
 				}
 			]
 		},
@@ -893,11 +895,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 46
+					"next" : 48 //9B.1
 				},
 				{
 					"answer" : "No",
-					"next" : 47
+					"next" : 49 //9B.2
 				}
 			]
 		},
@@ -907,12 +909,12 @@
 				{
 					"answer" : "I have a fostering or adopting agreement in place",
 					"info" : "fostering or adopting agreement",
-					"next" : 36 //6c
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "I am the special guardian, family carer or hold a residence order for a child whose parents are unable to provide care",
 					"info" : "special guardian / family carer description",
-					"next" : 36 //6c
+					"next" : 41 //6C
 				},
 				{
 					"answer" : "None of the above",
@@ -926,22 +928,22 @@
 				{
 					"answer" : "I have had an emergency move agreed by NBC",
 					"info" : "emergency agreement description",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "I have had a 'move-on' agreed by NBC",
 					"info" : "move-on description",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "I am part of a separte agreement by NBC",
 					"info" : "separate agreement description",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "I have special needs and need help finding accommodation",
 					"info" : "special needs description",
-					"next" : 100
+					"next" : 100 //app form
 				},
 				{
 					"answer" : "None of the above",
@@ -958,7 +960,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 49
+					"next" : 51 //10.1
 				}
 			]
 		},
@@ -971,7 +973,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 100
+					"next" : 100 //app form
 				}
 			]
 		}
