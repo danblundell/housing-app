@@ -539,6 +539,10 @@
 					"next" : 100 //app form
 				},
 				{
+					"answer" : "Serving or have served in the reserve Forces and are suffering from serious injury, illness or disability which is attributable (wholly or partly) to that service?",
+					"next" : 100 //app form
+				},
+				{
 					"answer" : "None of the above",
 					"next" : 25 //5.2.1
 				}
@@ -579,7 +583,7 @@
 			]
 		},
 		{//5.2.1.1.1 (27)
-			"question" : "Have you been residing outside the Borough of Northampton after being place there through no choice of your own?",
+			"question" : "Have you been residing outside of the Borough of Northampton AND if so were you placed there through no choice of your own?",
 			"answers" : [
 				{
 					"answer" : "Yes",
