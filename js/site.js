@@ -185,11 +185,12 @@
 			"answers" : [
 				{
 					"answer" : "Request that you bring in documents as proof of identity, eligibility, residence and/or current circumstances?",
-					"next" : 4 //2A.1.1.1.1
+					"next" : 4 //2A.1.1.1.1 
 				},
 				{
-					"answer" : "Tell you about your place on the register and/or your banding?",
-					"next" : 5 //2A.1.1.1.2
+					"answer" : "Tell you about your place on the housing register and/or your banding?",
+					"next" : 5, //2A.1.1.1.2
+					"info" : '<a href="http://www.northampton.gov.uk/info/200183/housing_allocations/1713/the_housing_allocation_policy_explained" target="_blank">Housing Register</a>'
 				},
 				{
 					"answer" : "Ask you to clarify any details about your application?",
@@ -211,7 +212,7 @@
 			]
 		},
 		{//2A.1.1.1.2 (5)
-			"question" : "Do you want to appeal against the decision?",
+			"question" : "Do you want to <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1302/housing_allocations-reviews_and_appeals' target='_blank'>appeal</a> against the decision?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -240,13 +241,14 @@
 			"question" : "Please tell us the reason you want or need to move",
 			"answers" : [
 				{
-					"answer" : "I want to move to a smaller property",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1773/current_tenancy_3"
+					"answer" : "I want to move to a smaller property (you are under-occupying your home)",
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1773/current_tenancy_3",
+					"info" : '<h3>Under-Occupying</h3><p>Northampton Borough Council will run incentive schemes aimed at tenants transferring into smaller properties, they may be under occupying 2, 3, 4, 5 and 6 bedroom properties.</p><p>You will be considered as under-occupying if you have more bedrooms than you need. Under the new rules, one bedroom is allowed for each of the following:</p><ul><li>every adult couple</li><li>any other adult aged 16 or over</li><li>any two children of the same sex aged under 16</li><li>any two children aged under 10 regardless of gender</li><li>any other child agred under 16</li><li>a non-resident carer (the claimant or their partner has a disability and need overnight care)</li></ul>'
 				},
 				{
 					"answer" : "I am overcrowded in my home",
 					"next" : 8, //2B.1.1
-					"info" : "overcrowded info"
+					"info" : "<h3>Overcrowding</h3><p>Statutory overcrowding as defined by Part X of Housing Act 1985 or a Court Order to re-house. <a href='http://www3.westminster.gov.uk/docstores/publications_store/overcrowding excerpt.pdf' target='_blank'>More information on overcrowding</a></p>"
 				},
 				{
 					"answer" : "I need to move for a severe medical or welfare reason",
@@ -256,7 +258,12 @@
 				{
 					"answer" : "My home lacks basic facilities",
 					"next" : 8, //2B.1.1
-					"info" : "basic facilities"
+					"info" : "<h3>Basic Facilities</h3><p>Every Housing Authority needs to consider the Basic Housing needs of individuals</p><ul><li>Heating</li><li>Hot Water</li><li>Access to a toilet and washing facilities</li><li>A kitchen to include running water</li></ul>"
+				},
+				{
+					"answer" : "My home is insanitory or hazardous",
+					"next" : 8, //2B.1.1
+					"info" : "<h3>Insanitory</h3><p>not sanitary or healthy; no definable space for a kitchen or bathroom. The area is dirty and potentially harmful to health.</p><h3>Hazardous</h3><p>A situation that poses a level of threat to life, health, property, or environment. Involving or exposing a person to risk. This can include, but is not limited to: asbestos, electricity, microbial pathogens, motor vehicles, needles, pesticides, vaccines, and X-rays.</p>"
 				},
 				{
 					"answer" : "I want to move for another reason",
@@ -265,7 +272,7 @@
 			]
 		},
 		{//2B.1.1 (8)
-			"question" : "Are you in <a href='#'>rent arrears</a>?",
+			"question" : "Are you in rent arrears?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -292,7 +299,7 @@
 			]
 		},
 		{//4 (10)
-			"question" : "Are you a <a href='#'>British Citizen</a>? ",
+			"question" : "Are you a <a href='http://www.ukba.homeoffice.gov.uk/britishcitizenship/aboutcitizenship/' target='_blank'>British Citizen</a>? ",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -305,7 +312,7 @@
 			]
 		},
 		{//4.1 (11)
-			"question" : "Do you live in the <a href='#'>United Kingdom</a>?",
+			"question" : "Do you live in the United Kingdom?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -331,7 +338,7 @@
 			]
 		},
 		{//4.2 (13)
-			"question" : "Are you a <a href='#'>Commonwealth Citizen</a>?",
+			"question" : "Are you a Commonwealth Citizen?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -344,7 +351,7 @@
 			]
 		},
 		{//4.2.1 (14)
-			"question" : "Do you have a <a href='#'>right of abode</a> in the <a href='#'>United Kingdom</a>?",
+			"question" : "Do you have a right of abode in the United Kingdom?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -357,7 +364,7 @@
 			]
 		},
 		{//4.2.2 (15)
-			"question" : "Are you an <a href='http://www.housing-rights.info/EEA-nationals.php'>EEA/EU National?</a>",
+			"question" : "Are you a citizen of one of the following EEA Countries <select><option>Austria</option><option>Belgium</option><option>Cyprus</option><option>Czech Republic</option><option>Denmark</option><option>Estonia</option><option>Finland</option><option>France</option><option>Germany</option><option>Greece</option><option>Hungary</option><option>Iceland</option><option>Ireland</option><option>Italy</option><option>Lativa</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Malta</option><option>The Netherlands</option><option>Norway</option><option>Poland</option><option>Slovakia</option><option>Slovenia</option><option>Spain</option><option>Sweden</option><option>Switzerland</option></select>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -383,7 +390,7 @@
 			]
 		},
 		{//4.2.2.1.1 (17)
-			"question" : "Are you <a href='#'>working now</a>, <a href='#'>temporarily out of work</a> or a <a href='#'>retired worker</a>?",
+			"question" : "Are you working now, temporarily out of work or a retired worker?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -409,7 +416,7 @@
 			]
 		},
 		{//4.2.2.2.1 (19)
-			"question" : "Are you currently working in the UK AND authorised to work?",
+			"question" : "Are you currently working in the UK AND authorised to work? (or exempt from authorisation)",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -445,6 +452,10 @@
 					"next" : 21 //5
 				},
 				{
+					"answer" : "Indefinite leave to remain",
+					"next" : 21 //5
+				},
+				{
 					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
 					"next" : 21 //5
 				},
@@ -459,7 +470,7 @@
 			"answers" : [
 				{
 					"answer" : "I/We are homeless",
-					"info" : "homeless description",
+					"info" : "<h3>Homeless</h3><p>You are homeless if you literally do not have a roof over your head but you may also be treated as homeless in other circumstances. Please see our <a href='http://www.northampton.gov.uk/info/200184/housing_options/239/homelessness' target='_blank'>homelessness pages for additional advice</a></p>",
 					"next" : 22 //5.1
 				},
 				{
@@ -468,7 +479,7 @@
 				},
 				{
 					"answer" : "I/We have somewhere to live at the moment but I am threatened with homelessness",
-					"info" : "threatened with homelessness description",
+					"info" : "<h3>Threatened with Homeless</h3><p>You may be treated as Homeless if you are threatened with losing your home in the next 28 days.  This could include being this could include being discharged from hospital or supported housing, leaving the Armed Forces or released from Prison. Please see our <a href='http://www.northampton.gov.uk/info/200184/housing_options/239/homelessness' target='_blank'>homelessness pages for additional advice</a></p>",
 					"next" : 24 //5.2
 				},
 				{
@@ -477,7 +488,7 @@
 				},
 				{
 					"answer" : "I/We have somewhere to live but have nowhere I can live together with my immediate family",
-					"info" : "immediate family description",
+					"info" : "<h3>Immediate Family</h3><p>Spouse, civil partner or children</p>",
 					"next" : 23 //5.1b
 				},
 				{
