@@ -154,12 +154,12 @@
 			"question" : "Would you like to:",
 			"answers" : [
 				{
-					"answer" : "Tell us about a change to your circumstances",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1299/housing_allocations-change_in_circumstances" //COC form
+					"answer" : "Tell us about a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1299/housing_allocations-change_in_circumstances' target='_blank'>change to your circumstances</a>",
+					"link" : "http://ascrmtest:8080/Ef3/HsngCOCs.xml" //COC form
 				},
 				{
 					"answer" : "Enquire about the progress to your application",
-					"next" : 2 //2A1.1
+					"next" : 2 //2A.1.1
 				},
 				{
 					"answer" : "Discuss something else",
@@ -172,7 +172,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 3
+					"next" : 3 //2A.1.1.1
 				},
 				{
 					"answer" : "No",
@@ -184,7 +184,7 @@
 			"question" : "Did the letter:",
 			"answers" : [
 				{
-					"answer" : "Request that you bring in documents as proof of identity, eligibility, residence and/or current circumstances?",
+					"answer" : "Request that you bring in <a href='https://www.northampton.gov.uk/downloads/file/3675/supporting_documentation' target='_blank'>documents</a> as proof of identity, eligibility, residence and/or current circumstances?",
 					"next" : 4 //2A.1.1.1.1 
 				},
 				{
@@ -225,7 +225,7 @@
 			]
 		},
 		{//2B (6)
-			"question" : "Are you a current Northampton Borough Council tenant or a tenant of a <a href='http://www.northampton.gov.uk/info/100007/housing/1272/housing_associations' title='Housing Association List' target='_blank'>Northampton Housing Association</a>",
+			"question" : "Are you a current Northampton Borough Council tenant or a tenant of a Northampton <a href='http://www.northampton.gov.uk/info/100007/housing/1272/housing_associations' title='Housing Association List' target='_blank'>Housing Association</a>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -338,7 +338,7 @@
 			]
 		},
 		{//4.2 (13)
-			"question" : "Are you a Commonwealth Citizen?",
+			"question" : "Are you a <a href='http://www.thecommonwealth.org/Internal/191086/191247/142227/members/' target='_blank'>Commonwealth Citizen?</a>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -377,7 +377,7 @@
 			]
 		},
 		{//4.2.2.1 (16)
-			"question" : "Have you worked in the United Kingdom at any time – now or in the past?",
+			"question" : "Have you <a href='http://www.housing-rights.info/02_4_EEA_workers.php#EEA-workers' target='_blank'>worked</a> in the United Kingdom at any time – now or in the past?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -390,7 +390,7 @@
 			]
 		},
 		{//4.2.2.1.1 (17)
-			"question" : "Are you working now, temporarily out of work or a retired worker?",
+			"question" : "Are you <a href='http://www.housing-rights.info/02_4_EEA_workers.php#EEA-workers' target='_blank'>working now, temporarily out of work or a retired worker?</a>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -403,7 +403,7 @@
 			]
 		},
 		{//4.2.2.2 (18)
-			"question" : "Are you a citizen of <a href='http://www.housing-rights.info/02_8_Bulgarians_Romanians.php'>Bulgaria or Romania (A2 countries)</a>?",
+			"question" : "Are you a citizen of <a href='http://www.housing-rights.info/02_8_Bulgaria' target='_blank'>Bulgaria or Romania (A2 countries)</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -416,7 +416,7 @@
 			]
 		},
 		{//4.2.2.2.1 (19)
-			"question" : "Are you currently working in the UK AND authorised to work? (or exempt from authorisation)",
+			"question" : "Are you currently working in the UK AND authorised to work? (or <a href='http://www.housing-rights.info/02_8_Bulgaria' target='_blank'>exempt from authorisation</a>)",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -519,7 +519,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				}
 			]
 		},
@@ -528,15 +528,23 @@
 			"answers" : [
 				{
 					"answer" : "I have been discharged from the Armed Forces within the last 5 years",
-					"next" : 100 //app form
+					"next" : 100, //app form
+					"info" : "<h3>Armed Forces</h3><p>The Armed Forces are the Naval Service (including the Royal Navy and Royal Marines), the British Army and the Royal Air Force</p>"
 				},
 				{
 					"answer" : "I am being discharged from the Armed Forces",
-					"next" : 100 //app form
+					"next" : 100, //app form
+					"info" : "<h3>Armed Forces</h3><p>The Armed Forces are the Naval Service (including the Royal Navy and Royal Marines), the British Army and the Royal Air Force</p>"
 				},
 				{
 					"answer" : "I am the spouse or civil partner of a recently deceased member of the Armed Forces",
-					"next" : 100 //app form
+					"next" : 100, //app form
+					"info" : "<h3>Armed Forces</h3><p>The Armed Forces are the Naval Service (including the Royal Navy and Royal Marines), the British Army and the Royal Air Force</p>"
+				},
+				{
+					"answer" : "Serving or have served in the reserve forces and are suffering from serious injury, illness or disability",
+					"next" : 100, //app form
+					"info" : "<h3>Reserve Forces</h3><p>The Territorial Army</p><h3>Injury, Illness or disability</h3><p>Any injury, illness or disability that is attributable wholly or partly to that service</p>"
 				},
 				{
 					"answer" : "Serving or have served in the reserve Forces and are suffering from serious injury, illness or disability which is attributable (wholly or partly) to that service?",
@@ -553,7 +561,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "No",
@@ -566,7 +574,7 @@
 			"answers" : [
 				{
 					"answer" : "You are you about to leave care or your foster placement is ending? ",
-					"next" : 50 //10
+					"next" : 52 //10
 				},
 				{
 					"answer" : "You are being discharged from hospital or supported housing and have nowhere to live or your accommodation is unsuitable for you to live in",
@@ -587,7 +595,7 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 38 //6B
+					"next" : 39 //6B
 				},
 				{
 					"answer" : "No",
@@ -600,23 +608,27 @@
 			"answers" : [
 				{
 					"answer" : "I'm overcrowded in my home",
-					"next" : 41 //6C
+					"next" : 43, //6C
+					"info" : "<h3>Overcrowding</h3><p>Statutory overcrowding as defined by Part X of Housing Act 1985 or a Court Order to re-house. <a href='http://www3.westminster.gov.uk/docstores/publications_store/overcrowding excerpt.pdf' target='_blank'>More information on overcrowding</a></p>"
 				},
 				{
 					"answer" : "My home lacks basic facilities",
-					"info" : "working toilet, washing facilities, hot water, kitchen, heating.",
-					"next" : 41 //6C
+					"info" : "<h3>Basic Facilities</h3><p>Every Housing Authority needs to consider the Basic Housing needs of individuals</p><ul><li>Heating</li><li>Hot Water</li><li>Access to a toilet and washing facilities</li><li>A kitchen to include running water</li></ul>",
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I'm are sharing facilities with another household",
+					"info" : "<h3>Sharing Facilities</h3><p>Sharing facilities could mean a living room, bathroom or kitchen.</p>",
 					"next" : 30 //5.3.1X
 				},
 				{
 					"answer" : "My accommodation is not suitable for medical reasons",
+					"info" : "<h3>Medical Reasons</h3><p>Reasons due to illness or disability.</p>",
 					"next" : 29 //5.3.1
 				},
 				{
 					"answer" : "I need to move because of a risk to my welfare",
+					"info" : "<h3>Risk to Welfare</h3><p>where there is a risk to the applicant’s (or someone to be housed with the applicant) welfare as a direct result of staying in the current accommodation and where a move to alternative accommodation would alleviate that risk</p>",
 					"next" : 29 //5.3.1
 				},
 				{
@@ -647,7 +659,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				}
 			]
 		},
@@ -656,15 +668,15 @@
 			"answers" : [
 				{
 					"answer" : "A child or children who are under 16",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "Someone who is dependent on you for care",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I am expecting a baby",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "None of the above",
@@ -677,42 +689,41 @@
 			"answers" : [
 				{
 					"answer" : "My accommodation is not suitable, or unreasonable to live in due to my medical needs",
-					"info" : "medical needs info",
-					"next" : 41 //6C
+					"info" : "<h3>Medical Needs</h3><p>Additional needs due to an illness or disability</p>",
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "There is a serious risk to my health or wellbeing if I stay in my current accommodation",
-					"info" : "health and wellbeing info",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I need to move to be able to provide care for someone",
-					"info" : "care definition",
+					"info" : "<h3>Care</h3><p>This can include group housing or paid carers either living in the property or calling to offer practical help</p>",
 					"next" : 33 //9A
 				},
 				{
 					"answer" : "I need to move to be able to receive care",
-					"info" : "care definition",
+					"info" : "<h3>Care</h3><p>This can include group housing or paid carers either living in the property or calling to offer practical help</p>",
 					"next" : 33 //9A
 				},
 				{
 					"answer" : "I need to move to take up an employment or training opportunity",
-					"info" : "employment or training description",
-					"next" : 41 //6C
+					"info" : "<h3>Employment or Training Opportunity</h3><p>Employment or training is described as either working or undertaking work related training for 16 hours or more per wee</p>",
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I have another specific medical or welfare reason for needing to move",
-					"info" : "medical or welfare definition",
-					"next" : 41 //6C
+					"info" : "<h3>Medical or Welfare</h3><p>Reasons or concerns due to an illness or disability</p>",
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 41 //6C
+					"next" : 43 //6C
 				}
 			]
 		},
 		{//9A (33)
-			"question" : "Are you an NBC Tenant or a Tenant of an NBC-partner Housing Association?",
+			"question" : "Are you an NBC Tenant or a Tenant of an NBC-partner <a href='http://www.northampton.gov.uk/info/100007/housing/1272/housing_associations' title='Housing Association List' target='_blank'>Housing Association</a>?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -720,7 +731,7 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 47 //9B
+					"next" : 49 //9B
 				}
 			]
 		},
@@ -729,33 +740,49 @@
 			"answers" : [
 				{
 					"answer" : "I am under-occupying my property?",
-					"info" : "under-occupying description",
-					"next" : 41 //6C
+					"info" : '<h3>Under-Occupying</h3><p>Northampton Borough Council will run incentive schemes aimed at tenants transferring into smaller properties, they may be under occupying 2, 3, 4, 5 and 6 bedroom properties.</p><p>You will be considered as under-occupying if you have more bedrooms than you need. Under the new rules, one bedroom is allowed for each of the following:</p><ul><li>every adult couple</li><li>any other adult aged 16 or over</li><li>any two children of the same sex aged under 16</li><li>any two children aged under 10 regardless of gender</li><li>any other child agred under 16</li><li>a non-resident carer (the claimant or their partner has a disability and need overnight care)</li></ul>',
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "My property has been designated as ‘sheltered housing’ and I do not need and/or qualify for this facility",
-					"info" : "sheltered housing description",
-					"next" : 41 //6C
+					"info" : '<h3>Sheltered Housing</h3><p>Self-contained, purpose-built flats, houses or bungalows with their own front doors, kitchens and bathrooms aimed at people over 60 years of age. They are available for couples or single people and offer independent living with extra help if needed</p>',
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "My property has been specially adapted and I no longer/do not need the adaptations",
-					"next" : 41 //6C
+					"info" : '<h3>Specially Adapted</h3><p>Specially adapted properties could include ramps for wheelchair access, bathrooms with wet rooms and handrails, stair-lifts etc</p>',
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I have been asked to move because my home requires major work within the next 6 weeks",
-					"next" : 41 //6C
+					"info" : '<h3>Major Works</h3><p>Major works to your property can include roofs, Windows, Structural works to walls, electrical rewiring</p>',
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I am a service tenant due to retire or have your contract of employment terminated",
-					"next" : 41 //6C
+					"info" : '<h3>Service Tenant</h3><p>Service tenants have had their housing provided to them by their employer, but it is not essential to live there in order to carry out the job (or the contract does not require you to live there).</p>',
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "None of the above",
-					"next" : 47 //9B
+					"next" : 49 //9B
 				}
 			]
 		},
-		{//6A (35)
+		{//6A-Pre (35)
+			"question" : "Do any of the follwing apply to you?<ul><li>You, or someone applying for housing with you is pregnant?</li><li>You have dependent children living with you who are still at school</li><li>You are 16 or 17 years old and have NOT been assessed as a ‘child in need’ by Childrens’ Services</li><li>You are vulnerable</li><li>You are homeless due to a fire, flood or other disaster</li><li>You are aged between 18-21 and were in care until you were 16</li></ul>",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 35 //6A
+				},
+				{
+					"answer" : "No",
+					"next" : 43 //6C
+				}
+			]
+		},
+		{//6A (36)
 			"question" : "Have you lived in the Northampton area for at least SIX out of the last TWELVE months or THREE out of the last FIVE years?",
 			"answers" : [
 				{
@@ -764,11 +791,11 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 36 //6A.1
+					"next" : 37 //6A.1
 				}
 			]
 		},
-		{//6A.1 (36)
+		{//6A.1 (37)
 			"question" : "Do you work in the Borough of Northampton?",
 			"answers" : [
 				{
@@ -777,11 +804,11 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 37 //6A.1.1
+					"next" : 38 //6A.1.1
 				}
 			]
 		},
-		{//6A1.1 (37)
+		{//6A1.1 (38)
 			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
 			"answers" : [
 				{
@@ -794,7 +821,20 @@
 				}
 			]
 		},
-		{//6B (38)
+		{//6B-Pre (39)
+			"question" : "Do any of the follwing apply to you?<ul><li>You, or someone applying for housing with you is pregnant?</li><li>You have dependent children living with you who are still at school</li><li>You are 16 or 17 years old and have NOT been assessed as a ‘child in need’ by Childrens’ Services</li><li>You are vulnerable</li><li>You are homeless due to a fire, flood or other disaster</li><li>You are aged between 18-21 and were in care until you were 16</li></ul>",
+			"answers" : [
+				{
+					"answer" : "Yes",
+					"next" : 39 //6B
+				},
+				{
+					"answer" : "No",
+					"next" : 46 //6D
+				}
+			]
+		},
+		{//6B (40)
 			"question" : "Did you or a joint applicant live in the Borough of Northampton for at least 6 out of the last 12 months or 3 out of the last 5 years prior to leaving Northampton",
 			"answers" : [
 				{
@@ -803,11 +843,11 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 39 //6B.1
+					"next" : 41 //6B.1
 				}
 			]
 		},
-		{//6B.1 (39)
+		{//6B.1 (41)
 			"question" : "Did you or a joint applicant work in the Borough of Northampton prior to leaving Northampton?",
 			"answers" : [
 				{
@@ -816,11 +856,11 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 40 //6B.1.1
+					"next" : 42 //6B.1.1
 				}
 			]
 		},
-		{//6B.1.1 (40)
+		{//6B.1.1 (42)
 			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
 			"answers" : [
 				{
@@ -833,38 +873,38 @@
 				}
 			]
 		},
-		{//6C (41)
+		{//6C (43)
 			"question" : "Have you lived in the Northampton area for at least three out of the last five years?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 50 //10
+					"next" : 52 //10
 				},
 				{
 					"answer" : "No",
-					"next" : 42 //6C.1
+					"next" : 44 //6C.1
 				}
 			]
 		},
-		{//6C.1 (42)
+		{//6C.1 (44)
 			"question" : "Do you work in Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 50 //10
+					"next" : 52 //10
 				},
 				{
 					"answer" : "No",
-					"next" : 43 //6C1.1
+					"next" : 45 //6C1.1
 				}
 			]
 		},
-		{//6C1.1 (43)
+		{//6C1.1 (45)
 			"question" : "Do you want to live near a close relative who has lived in Northampton for at least five years to be able to provide care or receive support?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 50 //10
+					"next" : 52 //10
 				},
 				{
 					"answer" : "No",
@@ -872,7 +912,7 @@
 				}
 			]
 		},
-		{//6D (44)
+		{//6D (46)
 			"question" : "Did you live in the Borough of Northampton for at least 3 out of th elast 5 years prior to leaving Northampton?",
 			"answers" : [
 				{
@@ -881,29 +921,29 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 45 //6D.1
+					"next" : 47 //6D.1
 				}
 			]
 		},
-		{//6D.1 (45)
+		{//6D.1 (47)
 			"question" : "Did you work in the Borough of Northampton prior to leaving Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 50 //10
+					"next" : 52 //10
 				},
 				{
 					"answer" : "No",
-					"next" : 46 //6D.1.1
+					"next" : 48 //6D.1.1
 				}
 			]
 		},
-		{//6D1.1 (46)
+		{//6D1.1 (48)
 			"question" : "Do you or a joint applicant want to live near a close relative who has lived in the Borough of Northampton for at least 5 years to be able to provide care or receive support?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 50 //10
+					"next" : 52 //10
 				},
 				{
 					"answer" : "No",
@@ -911,31 +951,31 @@
 				}
 			]
 		},
-		{//9B (47)
+		{//9B (49)
 			"question" : "Do you need to move to a larger home to accommodate a 'looked after' child?",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 48 //9B.1
+					"next" : 50 //9B.1
 				},
 				{
 					"answer" : "No",
-					"next" : 49 //9B.2
+					"next" : 51 //9B.2
 				}
 			]
 		},
-		{//9B.1 (48)
+		{//9B.1 (50)
 			"question" : "Which of the following apply to you?",
 			"answers" : [
 				{
 					"answer" : "I have a fostering or adopting agreement in place",
-					"info" : "fostering or adopting agreement",
-					"next" : 41 //6C
+					"info" : "<h3>Adoption Agreement</h3><p>An adopted child is one who has legally become the child of a parent or parents who are not the child's biological parents. To be legally recognised in the United Kingdom, the adoption must be made by order of a court or under the terms of the Hague Convention. A foreign adoption order will be recognised in the United Kingdom if it was made in a 'designated country' - a country included in the Adoption (Designation of Overseas Adoptions) Order 1973.</p><h3>Fostering Agreement</h3><p>An agreement between the fostering service and the foster carer which sets out matters such as terms of approval, the obligations of the foster carer, and what training and support the fostering service will provide for them. More information on what should be included in the Foster Care Agreement can be found In Schedule 5 of the Fostering Services (England) Regulations 2011.</p>",
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "I am the special guardian, family carer or hold a residence order for a child whose parents are unable to provide care",
-					"info" : "special guardian / family carer description",
-					"next" : 41 //6C
+					"info" : "<h3>Special guardian / Family carer</h3><p>A special guardianship order gives parental responsibility to the special guardian, which they share with anyone else who has this. The order lasts until the child is 18, unless the court discharges it earlier.</p><p>Family and friends care is when a child is living full time with someone who is a family member, friend or was previously known to them. The majority of family and friends care is made up of informal arrangements between parents and relatives, but there are other situations and sometimes legal orders too. Where the child is looked after by a local authority and the family and friends carer is approved as their foster carer, this is known as family and friends foster care.</p><p>A Residence order is an order granted by the court which gives the holder parental responsibility for a child, although they share this with anyone else who has parental responsibilit</p>",
+					"next" : 43 //6C
 				},
 				{
 					"answer" : "None of the above",
@@ -943,7 +983,7 @@
 				}
 			]
 		},
-		{//9B.2 (49)
+		{//9B.2 (51)
 			"question" : "Do any the following apply to you?",
 			"answers" : [
 				{
@@ -972,8 +1012,8 @@
 				}
 			]
 		},
-		{//10 (50)
-			"question" : "Do you have more than £30,000 household income (for a single person household) or more than £50,000 income (for a family household)?",
+		{//10 (52)
+			"question" : "Do you have more than £30,000 household gross income (for a single person household) or more than £50,000 income (for a family household)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -981,11 +1021,11 @@
 				},
 				{
 					"answer" : "No",
-					"next" : 51 //10.1
+					"next" : 53 //10.1
 				}
 			]
 		},
-		{//10.1 (51)
+		{//10.1 (53)
 			"question" : "Do you have more than £16,000 in assets (single applicant) or more than £32,000 in assets (joint applicants)?",
 			"answers" : [
 				{
