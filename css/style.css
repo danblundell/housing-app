@@ -98,6 +98,16 @@ body {
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin: 10% auto 0;
-  width: 50%; }
+  width: 50%;
+  text-align: left; }
+  .tooltip-content h3 {
+    margin-bottom: 1em; }
+  .tooltip-content a, .tooltip-content a:visited, .tooltip-content a:hover {
+    display: inline;
+    color: #a52449; }
+  .tooltip-content a.button {
+    color: white;
+    display: block;
+    text-align: center; }
   .tooltip-content div {
     margin-bottom: 1em; }
