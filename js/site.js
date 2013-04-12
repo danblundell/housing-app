@@ -176,7 +176,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1769/housing_application_progress_3"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1770/the_progress_of_your_housing_application_progress_4"
 				}
 			]
 		},
@@ -194,12 +194,12 @@
 				},
 				{
 					"answer" : "Ask you to clarify any details about your application?",
-					"next" : 6 //2B
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1770/the_progress_of_your_housing_application_progress_4"
 				}
 			]
 		},
 		{//2A.1.1.1.1 (4)
-			"question" : "Have you already brought in your documents for copying?",
+			"question" : "Have you already brought or sent in your documents for copying?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -216,11 +216,11 @@
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"link" : "http://www.northampton.gov.uk/appealsprocess"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1302/housing_allocations-reviews_and_appeals"
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/contactthecouncil"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1770/the_progress_of_your_housing_application_progress_4"
 				}
 			]
 		},
@@ -241,32 +241,32 @@
 			"question" : "Please tell us the reason you want or need to move",
 			"answers" : [
 				{
-					"answer" : "I want to move to a smaller property (you are under-occupying your home)",
+					"answer" : "You want to move to a smaller property (you are under-occupying your home)",
 					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1773/current_tenancy_3",
 					"info" : '<h3>Under-Occupying</h3><p>Northampton Borough Council will run incentive schemes aimed at tenants transferring into smaller properties, they may be under occupying 2, 3, 4, 5 and 6 bedroom properties.</p><p>You will be considered as under-occupying if you have more bedrooms than you need. Under the new rules, one bedroom is allowed for each of the following:</p><ul><li>every adult couple</li><li>any other adult aged 16 or over</li><li>any two children of the same sex aged under 16</li><li>any two children aged under 10 regardless of gender</li><li>any other child agred under 16</li><li>a non-resident carer (the claimant or their partner has a disability and need overnight care)</li></ul>'
 				},
 				{
-					"answer" : "I am overcrowded in my home",
+					"answer" : "You am overcrowded in my home",
 					"next" : 8, //2B.1.1
 					"info" : "<h3>Overcrowding</h3><p>Statutory overcrowding as defined by Part X of Housing Act 1985 or a Court Order to re-house. <a href='http://www3.westminster.gov.uk/docstores/publications_store/overcrowding excerpt.pdf' target='_blank'>More information on overcrowding</a></p>"
 				},
 				{
-					"answer" : "I need to move for a severe medical or welfare reason",
+					"answer" : "You need to move for a severe medical or welfare reason",
 					"next" : 8, //2B.1.1
 					"info" : "severe medical or welfare reason"
 				},
 				{
-					"answer" : "My home lacks basic facilities",
+					"answer" : "Your home lacks basic facilities",
 					"next" : 8, //2B.1.1
 					"info" : "<h3>Basic Facilities</h3><p>Every Housing Authority needs to consider the Basic Housing needs of individuals</p><ul><li>Heating</li><li>Hot Water</li><li>Access to a toilet and washing facilities</li><li>A kitchen to include running water</li></ul>"
 				},
 				{
-					"answer" : "My home is insanitory or hazardous",
+					"answer" : "Your home is insanitary or hazardous",
 					"next" : 8, //2B.1.1
-					"info" : "<h3>Insanitory</h3><p>not sanitary or healthy; no definable space for a kitchen or bathroom. The area is dirty and potentially harmful to health.</p><h3>Hazardous</h3><p>A situation that poses a level of threat to life, health, property, or environment. Involving or exposing a person to risk. This can include, but is not limited to: asbestos, electricity, microbial pathogens, motor vehicles, needles, pesticides, vaccines, and X-rays.</p>"
+					"info" : "<h3>Insanitary</h3><p>not sanitary or healthy; no definable space for a kitchen or bathroom. The area is dirty and potentially harmful to health.</p><h3>Hazardous</h3><p>A situation that poses a level of threat to life, health, property, or environment. Involving or exposing a person to risk. This can include, but is not limited to: asbestos, electricity, microbial pathogens, motor vehicles, needles, pesticides, vaccines, and X-rays.</p>"
 				},
 				{
-					"answer" : "I want to move for another reason",
+					"answer" : "You want to move for another reason",
 					"next" : 8 //2B.1.1
 				}
 			]
@@ -320,7 +320,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+					"next" : 12 //4.1.1
 				}
 			]
 		},
@@ -351,7 +351,7 @@
 			]
 		},
 		{//4.2.1 (14)
-			"question" : "Do you have a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>right of abode</a> in the United Kingdom?",
+			"question" : "Do you have the <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>right of abode</a> in the United Kingdom?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -456,7 +456,11 @@
 					"next" : 21 //5
 				},
 				{
-					"answer" : "An eligible family member of someone who has one of the above status <em>or</em> an eligible family member an EU/EEA Citizen",
+					"answer" : "An eligible family member of someone who has one of the above status",
+					"next" : 21 //5
+				},
+				{
+					"answer" : "An eligible family member an EU/EEA Citizen",
 					"next" : 21 //5
 				},
 				{
@@ -474,11 +478,11 @@
 					"next" : 22 //5.1
 				},
 				{
-					"answer" : "I/We have a home but I am unable to live in it due to fire, flood or other emergency",
+					"answer" : "I/We have a home but are unable to live in it due to fire, flood or other emergency",
 					"next" : 22 //5.1
 				},
 				{
-					"answer" : "I/We have somewhere to live at the moment but I am threatened with homelessness",
+					"answer" : "I/We have somewhere to live at the moment but are threatened with homelessness",
 					"info" : "<h3>Threatened with Homeless</h3><p>You may be treated as Homeless if you are threatened with losing your home in the next 28 days.  This could include being this could include being discharged from hospital or supported housing, leaving the Armed Forces or released from Prison. Please see our <a href='http://www.northampton.gov.uk/info/200184/housing_options/239/homelessness' target='_blank'>homelessness pages for additional advice</a></p>",
 					"next" : 24 //5.2
 				},
@@ -487,12 +491,12 @@
 					"next" : 22 //5.1
 				},
 				{
-					"answer" : "I/We have somewhere to live but have nowhere I can live together with my immediate family",
+					"answer" : "I/We have somewhere to live but have nowhere to can live together with my immediate family",
 					"info" : "<h3>Immediate Family</h3><p>Spouse, civil partner or children</p>",
 					"next" : 23 //5.1b
 				},
 				{
-					"answer" : "I/We have somewhere to live and am not threatened with homelessness",
+					"answer" : "I/We have somewhere to live and are not threatened with homelessness",
 					"next" : 28 //5.3 
 				}
 			]
@@ -553,7 +557,7 @@
 			]
 		},
 		{//5.2.1 (25)
-			"question" : "Do any of the following apply to you now or within the next 8 weeks?<ul><li>You have been given a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'Notice to Quit'</a></li><li>You have been asked to leave your home (but aren't leaving the Armed Forces</li><li>You are being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>evicted</a></li><li>Your property is being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>reposessed</a></li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>temorary accommodation</a></li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>Compulsory Purchase Order (CPO)</a></li><li>You have been asked to leave your <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'tied' accommodation</a></li><li>You have been asked to vacate your home as a result of <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>enforcement by the Local Authority</a></li></ul>",
+			"question" : "Do any of the following apply to you now or within the next 8 weeks?<ul><li>You have been given a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'Notice to Quit'</a></li><li>You have been asked to leave your home (but aren't leaving the Armed Forces)</li><li>You are being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>evicted</a></li><li>Your property is being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>repossessed</a></li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>temporary accommodation</a></li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>Compulsory Purchase Order (CPO)</a></li><li>You have been asked to leave your <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'tied' accommodation</a></li><li>You have been asked to vacate your home as a result of <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>enforcement by the Local Authority</a></li></ul>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -573,7 +577,7 @@
 					"next" : 52 //10
 				},
 				{
-					"answer" : "You are being discharged from hospital or supported housing and have nowhere to live or your accommodation is unsuitable for you to live in",
+					"answer" : "You are being discharged from hospital or supported housing and have nowhere to live or your accommodation is now unsuitable for you to live in",
 					"next" : 27 //5.2.1.1.1  
 				},
 				{
@@ -613,7 +617,7 @@
 					"next" : 43 //6C
 				},
 				{
-					"answer" : "I'm are sharing facilities with another household",
+					"answer" : "I am sharing facilities with another household",
 					"info" : "<h3>Sharing Facilities</h3><p>Sharing facilities could mean a living room, bathroom or kitchen.</p>",
 					"next" : 30 //5.3.1X
 				},
@@ -766,7 +770,7 @@
 			]
 		},
 		{//6A-Pre (35)
-			"question" : "Do any of the follwing apply to you?<ul><li>You, or someone applying for housing with you is pregnant?</li><li>You have dependent children living with you who are still at school</li><li>You are 16 or 17 years old and have NOT been assessed as a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>‘child in need’</a> by Childrens’ Services</li><li>You are <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>vulnerable</a></li><li>You are homeless due to a fire, flood or other disaster</li><li>You are aged between 18-21 and were in care until you were 16</li></ul>",
+			"question" : "Do any of the following apply to you?<ul><li>Are you, or someone applying for housing with you, pregnant?</li><li>You have dependent children living with you who are still in full time education</li><li>You are 16 or 17 years old and have NOT been assessed as a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>‘child in need’</a> by Childrens’ Services</li><li>You are <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>vulnerable</a></li><li>You are homeless due to a fire, flood or other disaster</li><li>You are aged between 18-21 and were in care until you were 16</li></ul>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -792,7 +796,7 @@
 			]
 		},
 		{//6A.1 (37)
-			"question" : "Do you work in the Borough of Northampton?",
+			"question" : "Do you work in the Borough of Northampton? <p>(You must be working for at least 16 hours a week for 9 out of the last 12 months to qualify.)</p>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -818,7 +822,7 @@
 			]
 		},
 		{//6B-Pre (39)
-			"question" : "Do any of the follwing apply to you?<ul><li>You, or someone applying for housing with you is pregnant?</li><li>You have dependent children living with you who are still at school</li><li>You are 16 or 17 years old and have NOT been assessed as a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>‘child in need’</a> by Childrens’ Services</li><li>You are <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>vulnerable</a></li><li>You are homeless due to a fire, flood or other disaster</li><li>You are aged between 18-21 and were in care until you were 16</li></ul>",
+			"question" : "Do any of the following apply to you?<ul><li>Are you, or someone applying for housing with you, pregnant?</li><li>You have dependent children living with you who are still in full time eduction</li><li>You are 16 or 17 years old and have NOT been assessed as a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>‘child in need’</a> by Childrens’ Services</li><li>You are <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>vulnerable</a></li><li>You are homeless due to a fire, flood or other disaster</li><li>You are aged between 18-21 and were in care until you were 16</li></ul>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -844,7 +848,7 @@
 			]
 		},
 		{//6B.1 (41)
-			"question" : "Did you or a joint applicant work in the Borough of Northampton prior to leaving Northampton?",
+			"question" : "Did you or a joint applicant work in the Borough of Northampton prior to leaving Northampton? <p>(You must have worked for at least 16 hours a week for 9 out of the last 12 months before you left Northampton to qualify.)</p>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -883,7 +887,7 @@
 			]
 		},
 		{//6C.1 (44)
-			"question" : "Do you work in Northampton?",
+			"question" : "Do you work in Northampton? <p>(You must be working for at least 16 hours a week for 9 out of the last 12 months to qualify.)</p>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -922,7 +926,7 @@
 			]
 		},
 		{//6D.1 (47)
-			"question" : "Did you work in the Borough of Northampton prior to leaving Northampton?",
+			"question" : "Did you work in the Borough of Northampton prior to leaving Northampton? <p>(You must have worked for at least 16 hours a week for 9 out of the last 12 months before you left Northampton to qualify.)</p>",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -1009,7 +1013,7 @@
 			]
 		},
 		{//10 (52)
-			"question" : "Do you have more than £30,000 household <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>gross income</a> (for a single person household) or more than £50,000 <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>income</a> (for a family household)?",
+			"question" : "Do you have more than £30,000 household <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>gross income</a> (for a single person household) or more than £50,000 <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>gross income</a> (for a family household)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -1022,7 +1026,7 @@
 			]
 		},
 		{//10.1 (53)
-			"question" : "Do you have more than £16,000 in <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>assets</a> (single applicant) or more than £32,000 in <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>assets</a> (joint applicants)?",
+			"question" : "Do you have more than £16,000 in <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>assets or savings</a> (single applicant) or more than £32,000 in <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>assets or savings</a> (joint applicants)?",
 			"answers" : [
 				{
 					"answer" : "Yes",
