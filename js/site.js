@@ -557,11 +557,11 @@
 			]
 		},
 		{//5.2.1 (25)
-			"question" : "Do any of the following apply to you now or within the next 8 weeks?<ul><li>You have been given a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'Notice to Quit'</a></li><li>You have been asked to leave your home (but aren't leaving the Armed Forces)</li><li>You are being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>evicted</a></li><li>Your property is being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>repossessed</a></li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>temporary accommodation</a></li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>Compulsory Purchase Order (CPO)</a></li><li>You have been asked to leave your <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'tied' accommodation</a></li><li>You have been asked to vacate your home as a result of <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>enforcement by the Local Authority</a></li></ul>",
+			"question" : "Do any of the following apply to you now or within the next 8 weeks?<ul><li>You have been given a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'Notice to Quit'</a></li><li>You have been <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>asked to leave</a> your home (but aren't leaving the Armed Forces)</li><li>You are being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>evicted</a></li><li>Your property is being <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>repossessed</a></li><li>Your accommodation is being sold</li><li>You can no longer afford your accommodation</li><li>You are leaving a hostel or <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>temporary accommodation</a></li><li>You have nowhere to park your mobile home or houseboat</li><li>You have been asked to vacate your home due to a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>Compulsory Purchase Order (CPO)</a></li><li>You have been asked to leave your <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'tied' accommodation</a></li><li>You have been asked to vacate your home as a result of <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>enforcement by the Local Authority</a></li></ul>",
 			"answers" : [
 				{
 					"answer" : "Yes",
-					"next" : 43 //6C
+					"next" : 35 //6A
 				},
 				{
 					"answer" : "No",
@@ -638,7 +638,7 @@
 			]
 		},
 		{//5.3.1 (29)
-			"question" : "Do you need to move because you are suffering severe harassment or violence in your current accommodation?",
+			"question" : "Do you need to move because you are suffering <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>severe harassment or violence</a> in your current accommodation?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -817,7 +817,7 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1824/homelessness_advice_and_help"
 				}
 			]
 		},
@@ -869,12 +869,12 @@
 				},
 				{
 					"answer" : "No",
-					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1776/citizenship_2"
+					"link" : "http://www.northampton.gov.uk/info/200183/housing_allocations/1824/homelessness_advice_and_help"
 				}
 			]
 		},
 		{//6C (43)
-			"question" : "Have you lived in the Northampton area for at least three out of the last five years?",
+			"question" : "Have you lived in the Northampton area continuously for at least three years?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -913,7 +913,7 @@
 			]
 		},
 		{//6D (46)
-			"question" : "Did you live in the Borough of Northampton for at least 3 out of th elast 5 years prior to leaving Northampton?",
+			"question" : "Did you live in the Borough of Northampton continuously for 3 years prior to leaving Northampton?",
 			"answers" : [
 				{
 					"answer" : "Yes",
@@ -952,7 +952,7 @@
 			]
 		},
 		{//9B (49)
-			"question" : "Do you need to move to a larger home to accommodate a 'looked after' child?",
+			"question" : "Do you need to move to a larger home to accommodate a <a href='http://www.northampton.gov.uk/info/200183/housing_allocations/1826/housing_application_process-glossary' target='_blank'>'looked after'</a> child?",
 			"answers" : [
 				{
 					"answer" : "Yes",
